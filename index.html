@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belal Ezat's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/8e98006f77.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --accent-color: #00d8a5;
+        --accent2-color: #f2ea02;
+        --accent3-color: #e6248e;
+        --accent4-color: #2c62f8;
+        --primary-color: #1db954;
+        --dark-text-color: #ffffff;
+        --gray-text-color: #b3b3b3;
+        --button-padding-x: 20px;
+        --button-padding-y: 10px;
+        --font-family-body: 'Nunito', sans-serif;
+        --light-text-color: #000000;
+        --dark-border-color: #282828;
+        --light-border-color: #d9f8e7;
+        --font-family-heading: 'Poppins', sans-serif;
+        --button-rounded-radius: 50px;
+        --dark-background-color: #121212;
+        --light-background-color: #aaf0c8;
+        --medium-background-color: #8ee6b5;
+        --primary-button-text-color: #ffffff;
+        --secondary-button-bg-color: #181818;
+        --secondary-button-text-color: #ffffff;
+        --primary-button-hover-bg-color: #1ed760;
+        --primary-button-hover-text-color: #ffffff;
+        --secondary-button-hover-bg-color: #282828;
+        --secondary-button-hover-text-color: #ffffff;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        background-color: var(--dark-background-color);
+        font-family: var(--font-family-body);
+        scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-family-heading);
+      }
+    </style>
+  </head>
+  <body class="h-full bg-white">
+    <div class="[font-family:var(--font-family-body)]">
+      <header
+  class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-50 backdrop-blur-lg bg-opacity-95"
+  id="global-header"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center">
+          <img
+            src="assets/belal-logo.png"
+            alt="Belal Ezat Personal Portfolio"
+            style="height: 140px; width: auto"
+            class="w-auto"
+          />
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a
+          href="#volunteering"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+          >Volunteering</a
+        >
+        <a
+          href="#experience"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+          >Work Experience</a
+        >
+        <a
+          href="#portfolio"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+          >Portfolio</a
+        >
+        <a
+          href="#about"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+          >About</a
+        >
+        <a
+          href="#contact"
+          class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+          >Contact Me</a
+        >
+        
+        <div class="ml-4">
+          <img
+            class="h-12 w-12 rounded-full object-cover"
+            src="assets/belalphoto.png"
+            alt="Belal Ezat"
+          />
+        </div>
+        </nav>
+
+      <div class="lg:hidden">
+        <button
+          id="mobile-menu-toggle"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] p-2"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav
+      id="mobile-menu"
+      class="hidden lg:hidden bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-4"
+    >
+      <div class="flex flex-col space-y-4">
+        <a
+          href="#volunteering"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+          >Volunteering</a
+        >
+        <a
+          href="#experience"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+          >Work Experience</a
+        >
+        <a
+          href="#portfolio"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+          >Portfolio</a
+        >
+        <a
+          href="#about"
+          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+          >About</a
+        >
+        <a
+          href="#contact"
+          class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-full font-semibold transition-all duration-300 mx-4 text-center"
+          >Contact Me</a
+        >
+      </div>
+    </nav>
+  </div>
+</header>
+      <section
+        class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden"
+        id="hero"
+      >
+        <div class="absolute inset-0">
+          <div
+            class="absolute top-20 left-10 w-64 h-64 bg-[var(--primary-color)] rounded-full opacity-10 animate-float"
+          ></div>
+          <div
+            class="absolute bottom-20 right-10 w-48 h-48 bg-[var(--accent-color)] rounded-full opacity-15 animate-float-delayed"
+          ></div>
+          <div
+            class="absolute top-1/2 left-1/4 w-32 h-32 bg-[var(--accent3-color)] rounded-full opacity-20 animate-float-slow"
+          ></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+              <div
+                class="inline-flex items-center px-4 py-2 bg-[var(--primary-color)] bg-opacity-20 rounded-full text-[var(--dark-text-color)] text-sm font-medium mb-6"
+              >
+                <i class="fas fa-code mr-2"></i>
+                 Now Playing
+              </div>
+              <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight"
+              >
+                Belal Ezat
+                <span
+                  class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent"
+                >
+                  Aspiring Developer & Cloud Engineer
+                </span>
+              </h1>
+
+              <p
+                class="text-lg sm:text-xl text-[var(--gray-text-color)] mb-8 leading-relaxed"
+              >
+                I'm a passionate Computer Science student at NJIT, crafting innovative solutions for the modern world.
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              >
+                <a
+                  href="#portfolio"
+                  class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-folder-open mr-3"></i>
+                  View My Work
+                </a>
+                <a
+                  href="#about"
+                  class="bg-transparent border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                >
+                  <i class="fas fa-user mr-3"></i>
+                  More About Me
+                </a>
+              </div>
+            </div>
+
+            <div class="relative ml-64">
+              <div class="relative z-10">
+                <img
+                  src="assets/belalphoto.png"
+                  alt="Belal Ezat Personal Portfolio"
+                  class="w-2/3 h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div
+                class="absolute -top-4 -right-4 w-24 h-24 bg-[var(--primary-color)] rounded-full opacity-20 animate-float"
+              ></div>
+              <div
+                class="absolute -bottom-4 -left-4 w-32 h-32 bg-[var(--accent-color)] rounded-full opacity-15 animate-float-delayed"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <a href="#portfolio"><i class="fas fa-chevron-down text-[var(--gray-text-color)] text-xl"></i></a>
+        </div>
+
+        <style>
+          @keyframes float {
+            0%,
+            100% {
+              transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+              transform: translateY(-20px) rotate(180deg);
+            }
+          }
+          @keyframes float-delayed {
+            0%,
+            100% {
+              transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+              transform: translateY(-15px) rotate(-180deg);
+            }
+          }
+          @keyframes float-slow {
+            0%,
+            100% {
+              transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+              transform: translateY(-10px) rotate(90deg);
+            }
+          }
+          .animate-float {
+            animation: float 6s ease-in-out infinite;
+          }
+          .animate-float-delayed {
+            animation: float-delayed 8s ease-in-out infinite;
+          }
+          .animate-float-slow {
+            animation: float-slow 10s ease-in-out infinite;
+          }
+        </style>
+      </section>
+
+      <section
+        class="code-section bg-[var(--dark-background-color)] py-20 relative"
+        id="portfolio"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6"
+            >
+              My <span class="text-[var(--primary-color)]">Portfolio</span>
+            </h2>
+            <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
+              A collection of my projects, showcasing my skills in development and system administration.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div
+              class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--primary-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+            >
+              <div class="relative mb-6">
+                <img
+                  src="assets/rhel.png"
+                  alt="Server Infrastructure"
+                  class="w-full h-48 object-cover rounded-xl"
+                />
+                
+              </div>
+              <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                RHEL 9.5 Server Deployment, Hardening, and Monitoring
+              </h3>
+              <p class="text-[var(--gray-text-color)] mb-4">
+                Designed a cross-platform home lab with RHEL, Fedora, and Windows. Deployed Nextcloud in Docker, built a SIEM pipeline with Wazuh and Splunk, and configured WireGuard VPN for secure access.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-[var(--primary-color)] text-sm font-medium"
+                  >VMWare, Splunk, Nextcloud</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+            >
+              <div class="relative mb-6">
+                <img
+                  src="assets/profpickr.png"
+                  alt="ProfPickr Project"
+                  class="w-full h-48 object-cover rounded-xl"
+                />
+                
+              </div>
+              <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                ProfPickr Hackathon Project (GirlHacks 2025)
+              </h3>
+              <p class="text-[var(--gray-text-color)] mb-4">
+                Co-developed a platform that integrates NJIT course schedules with RateMyProfessor ratings to generate AI-powered professor recommendations. Led frontend development with React.js and managed MongoDB connections.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-[var(--accent-color)] text-sm font-medium"
+                  >React.js, FastAPI, MongoDB, Gemini API</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden"
+        id="experience"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-12">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4"
+            >
+              Work <span class="text-[var(--primary-color)]">Experience</span>
+            </h2>
+          </div>
+          <div class="max-w-3xl mx-auto">
+            <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
+                <h3 class="text-2xl font-bold text-white">IT Service Specialist</h3>
+                <p class="text-lg text-[var(--primary-color)] font-semibold">Best Bet Computer</p>
+                <p class="text-md text-gray-400 mb-4">Sep 2025 - Present | Union, NJ</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Deployed and configured hardware at client sites, ensuring seamless integration with existing systems and reducing setup time by 20 percent.</li>
+                    <li>Managed and updated multiple client websites, improving uptime and site performance while supporting branding and business goals.</li>
+                    <li>Leveraged secure remote desktop tools to configure and optimize client software environments, resolving complex issues quickly and reducing average downtime by 40 percent.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="code-section bg-[var(--dark-background-color)] py-20" id="volunteering">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-16">
+                  <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                      Leadership & <span class="text-[var(--primary-color)]">Volunteering</span>
+                  </h2>
+              </div>
+              <div class="max-w-3xl mx-auto">
+                  <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
+                      <h3 class="text-2xl font-bold text-white">Treasurer</h3>
+                      <p class="text-lg text-[var(--primary-color)] font-semibold">United Mission Relief (UMR) at NJIT</p>
+                      <p class="text-md text-gray-400 mb-4">Sep 2025 - Present</p>
+                      <ul class="list-disc list-inside text-gray-300 space-y-2">
+                          <li>Developed and managed club budgets; optimized funding allocations to support multiple events and initiatives.</li>
+                          <li>Collaborated with other members to plan and coordinate events, ensuring cost-effective execution.</li>
+                          <li>Tracked income and expenses, maintained accurate financial records, and prepared regular financial reports for the executive board.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="code-section bg-[var(--dark-background-color)] py-20" id="about">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6"
+            >
+              My Top <span class="text-[var(--primary-color)]">Skills</span>
+            </h2>
+            <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
+              A list of my technical skills and the technologies I work with.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div
+              class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-8 border border-[var(--dark-border-color)]"
+            >
+              <h3
+                class="text-2xl font-bold text-[var(--dark-text-color)] mb-8 flex items-center"
+              >
+                <i class="fas fa-code text-[var(--primary-color)] mr-3"></i>
+                Languages
+              </h3>
+
+              <div class="flex flex-wrap gap-3">
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Python</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Java</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">C</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">C++</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">HTML/CSS</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">JavaScript</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">SQL</span>
+                  <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Bash/Shell</span>
+                   <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">PHP</span>
+              </div>
+            </div>
+
+            <div class="space-y-8">
+              <div
+                class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)]"
+              >
+                <h3
+                  class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center"
+                >
+                  <i class="fas fa-tools text-[var(--primary-color)] mr-3"></i>
+                  Developer Tools
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">VS Code</span>
+                    <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Eclipse</span>
+                    <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">IntelliJ IDEA</span>
+                    <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">GitHub</span>
+                     <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Docker</span>
+                </div>
+              </div>
+               <div
+                class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)]"
+              >
+                <h3
+                  class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center"
+                >
+                  <i class="fas fa-cogs text-[var(--primary-color)] mr-3"></i>
+                  Technologies/Frameworks
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">VMware</span>
+                    <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">VirtualBox</span>
+                    <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Linux</span>
+                    <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Windows</span>
+                     <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Git</span>
+                     <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">AWS</span>
+                     <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Azure</span>
+                     <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Kubernetes</span>
+                     <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">React</span>
+                     <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden" id="contact">
+        <div class="absolute inset-0">
+          <div class="absolute top-20 left-20 w-64 h-64 bg-[var(--primary-color)] rounded-full opacity-5 animate-float"></div>
+          <div class="absolute bottom-20 right-20 w-48 h-48 bg-[var(--accent-color)] rounded-full opacity-10 animate-float-delayed"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent3-color)] rounded-full opacity-5"></div>
+        </div>
+      
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-12">
+              <div class="inline-flex items-center px-6 py-3 bg-[var(--primary-color)] bg-opacity-20 rounded-full text-[var(--dark-text-color)] font-semibold mb-6 backdrop-blur-sm">
+                <i class="fas fa-headphones mr-3"></i>
+                Ready to Collaborate?
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight">
+                Let's Create Something
+                <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">
+                  Amazing Together
+                </span>
+              </h2>
+              <p class="text-lg sm:text-xl text-[var(--gray-text-color)] leading-relaxed">
+                Ready to bring your ideas to life? Let's discuss your next project and
+                create digital experiences that truly resonate with your audience.
+              </p>
+            </div>
+      
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+              <a href="#contact-footer" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group">
+                <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                Start a Project
+              </a>
+              <a href="#portfolio" class="bg-transparent border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
+                <i class="fas fa-folder-open mr-3 group-hover:rotate-12 transition-transform duration-300"></i>
+                View Portfolio
+              </a>
+            </div>
+      
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+              <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--primary-color)] transition-all duration-300 transform hover:scale-105">
+                <div class="w-16 h-16 bg-[var(--primary-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-envelope text-[var(--primary-color)] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">
+                  Email Me
+                </h3>
+                <p class="text-[var(--gray-text-color)] mb-4">
+                  Get in touch for project inquiries
+                </p>
+                <a href="mailto:belalezat05@gmail.com" class="text-[var(--primary-color)] hover:text-[var(--primary-button-hover-bg-color)] font-semibold transition-colors duration-300">
+                  belalezat05@gmail.com
+                </a>
+              </div>
+      
+              <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent-color)] transition-all duration-300 transform hover:scale-105">
+                <div class="w-16 h-16 bg-[var(--accent-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i class="fab fa-linkedin text-[var(--accent-color)] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">
+                  LinkedIn
+                </h3>
+                <p class="text-[var(--gray-text-color)] mb-4">
+                  Connect professionally
+                </p>
+                <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="text-[var(--accent-color)] hover:text-opacity-80 font-semibold transition-colors duration-300">
+                  /in/belal-ezat
+                </a>
+              </div>
+      
+              <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent3-color)] transition-all duration-300 transform hover:scale-105">
+                <div class="w-16 h-16 bg-[var(--accent3-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-book text-[var(--accent3-color)] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">
+                  GitBook
+                </h3>
+                <p class="text-[var(--gray-text-color)] mb-4">View my project documentation</p>
+                <a href="https://belal-ezat.gitbook.io/projects/" target="_blank" class="text-[var(--accent3-color)] hover:text-opacity-80 font-semibold transition-colors duration-300">
+                  /projects
+                </a>
+              </div>
+            </div>
+      
+            <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] rounded-2xl p-8 text-[var(--dark-text-color)]">
+              <div class="flex items-center justify-center mb-4">
+                <i class="fas fa-quote-left text-3xl opacity-50"></i>
+              </div>
+              <blockquote class="text-xl sm:text-2xl font-semibold mb-4 leading-relaxed">
+                "One machine can do the work of fifty ordinary men.  No machine can do the work of one extraordinary man."
+              </blockquote>
+              <div class="text-lg opacity-90">— Elbert Hubbard</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="code-section bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-16"
+        id="contact-footer"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-4 gap-12 mb-12">
+            <div class="lg:col-span-2">
+              <a href="/" class="inline-block mb-6">
+                <img
+                  src="assets/belal-logo.png"
+                  alt="Belal Ezat Personal Portfolio"
+                  style="height: 200px; width: auto"
+                  class="w-auto"
+                />
+              </a>
+              <p
+                class="text-[var(--gray-text-color)] text-lg leading-relaxed mb-6 max-w-lg"
+              >
+                Creating projects that resonate. A passionate developer crafting innovative solutions for the modern
+                world.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="https://linkedin.com/in/belal-ezat" target="_blank"
+                  class="w-12 h-12 bg-[var(--secondary-button-bg-color)] hover:bg-[var(--primary-color)] rounded-full flex items-center justify-center text-[var(--gray-text-color)] hover:text-[var(--primary-button-text-color)] transition-all duration-300 transform hover:scale-110"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://belal-ezat.gitbook.io/projects/" target="_blank"
+                  class="w-12 h-12 bg-[var(--secondary-button-bg-color)] hover:bg-[var(--accent4-color)] rounded-full flex items-center justify-center text-[var(--gray-text-color)] hover:text-[var(--primary-button-text-color)] transition-all duration-300 transform hover:scale-110"
+                >
+                  <i class="fab fa-git-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">
+                Navigation
+              </h3>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="#hero"
+                    class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"
+                  >
+                    <i class="fas fa-home mr-3 w-4"></i>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#portfolio"
+                    class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"
+                  >
+                    <i class="fas fa-folder mr-3 w-4"></i>
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#experience"
+                    class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"
+                  >
+                    <i class="fas fa-briefcase mr-3 w-4"></i>
+                    Work Experience
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"
+                  >
+                    <i class="fas fa-user mr-3 w-4"></i>
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"
+                  >
+                    <i class="fas fa-envelope mr-3 w-4"></i>
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">
+                Get in Touch
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center text-[var(--gray-text-color)]">
+                  <i
+                    class="fas fa-envelope text-[var(--primary-color)] mr-3 w-4"
+                  ></i>
+                  <a
+                    href="mailto:belalezat05@gmail.com"
+                    class="hover:text-[var(--primary-color)] transition-colors duration-300"
+                    >belalezat05@gmail.com</a
+                  >
+                </div>
+                <div class="flex items-center text-[var(--gray-text-color)]">
+                  <i class="fas fa-phone text-[var(--primary-color)] mr-3 w-4"></i>
+                  <span>(973) 862-1386</span>
+                </div>
+                <div class="flex items-center text-[var(--gray-text-color)]">
+                  <i
+                    class="fas fa-map-marker-alt text-[var(--primary-color)] mr-3 w-4"
+                  ></i>
+                  <span>New York Metropolitan Area</span>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-[var(--dark-text-color)] font-semibold mb-4">
+                  Stay Updated
+                </h4>
+                <div class="flex">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    class="flex-1 px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] rounded-l-full text-[var(--dark-text-color)] placeholder-[var(--gray-text-color)] focus:outline-none focus:border-[var(--primary-color)]"
+                  />
+                  <button
+                    class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-2 rounded-r-full transition-colors duration-300"
+                  >
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-[var(--dark-border-color)] pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <div class="text-[var(--gray-text-color)] mb-4 md:mb-0">
+                <p>
+                  &copy; 2025 Belal Ezat. All rights reserved. Designed with innovation
+                  and powered by creativity.
+                </p>
+              </div>
+              <div class="flex items-center space-x-6">
+                <a
+                  href="#"
+                  class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 text-sm"
+                  >Privacy Policy</a
+                >
+                <a
+                  href="#"
+                  class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 text-sm"
+                  >Terms of Service</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (toggleButton && mobileMenu) {
+                toggleButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
+
