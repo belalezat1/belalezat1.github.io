@@ -83,3 +83,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+// --- NEW: Scroll Animation Logic (Intersection Observer) ---
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        root: null, // use the viewport as the container
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // If element is visible, add the class to start the animation
+                entry.target.classList.add('animate-visible');
+                // Stop observing once it has animated
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Target all elements with the 'scroll-animate' class
+    const elementsToAnimate = document.querySelectorAll('.scroll-animate');
+    
+    elementsToAnimate.forEach(element => {
+        // Skip the header and hero sections as they are visible on load
+        // We will manually make them visible if they are a 'code-section'
+        if (element.id === 'global-header' || element.id === 'hero') {
+             // For elements visible on load, just add the class immediately
+             element.classList.add('animate-visible');
+             return; // Move to the next element
+        }
+
+        // For all other sections, observe them for scroll visibility
+        observer.observe(element);
+    });
+});
+// --- END NEW SCROLL ANIMATION LOGIC ---

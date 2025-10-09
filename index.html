@@ -68,12 +68,38 @@
       .modal-content {
         max-height: 80vh;
       }
+
+      /* --- NEW: Scroll Animation Styles --- */
+      /* Base class for elements that should animate */
+      .scroll-animate {
+        opacity: 0;
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transform: translateY(20px);
+      }
+
+      /* Animation class - Fade in and slide up */
+      .scroll-animate.animate-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Optional: You can add variations, e.g., for elements sliding from the right */
+      .scroll-animate.slide-from-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .scroll-animate.slide-from-right.animate-visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      /* ----------------------------------- */
     </style>
   </head>
-  <body class="h-full bg-white">
+  <body class="h-full bg-[var(--dark-background-color)]">
     <div class="[font-family:var(--font-family-body)]">
       <header
-  class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-50 backdrop-blur-lg bg-opacity-95"
+  class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-50 backdrop-blur-lg bg-opacity-95 scroll-animate animate-visible"
   id="global-header"
 >
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +195,7 @@
   </div>
 </header>
       <section
-        class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden"
+        class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden scroll-animate animate-visible"
         id="hero"
       >
         <div class="absolute inset-0">
@@ -295,7 +321,7 @@
       </section>
 
       <section
-        class="code-section bg-[var(--dark-background-color)] py-20 relative"
+        class="code-section bg-[var(--dark-background-color)] py-20 relative scroll-animate slide-from-right"
         id="portfolio"
       >
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -458,7 +484,7 @@
 
 
       <section
-        class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden"
+        class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden scroll-animate"
         id="experience"
       >
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -482,7 +508,7 @@
         </div>
       </section>
       
-      <section class="code-section bg-[var(--dark-background-color)] py-20" id="extracurriculars">
+      <section class="code-section bg-[var(--dark-background-color)] py-20 scroll-animate slide-from-right" id="extracurriculars">
           <div class="container mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center mb-16">
                   <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -528,7 +554,7 @@
           </div>
       </section>
 
-      <section class="code-section bg-[var(--dark-background-color)] py-20" id="about">
+      <section class="code-section bg-[var(--dark-background-color)] py-20 scroll-animate" id="about">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
             <h2
@@ -610,7 +636,7 @@
         </div>
       </section>
 
-      <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden" id="contact">
+      <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden scroll-animate slide-from-right" id="contact">
         <div class="absolute inset-0">
           <div class="absolute top-20 left-20 w-64 h-64 bg-[var(--primary-color)] rounded-full opacity-5 animate-float"></div>
           <div class="absolute bottom-20 right-20 w-48 h-48 bg-[var(--accent-color)] rounded-full opacity-10 animate-float-delayed"></div>
@@ -706,7 +732,7 @@
       </section>
 
       <footer
-        class="code-section bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-16"
+        class="code-section bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-16 scroll-animate"
         id="contact-footer"
       >
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
