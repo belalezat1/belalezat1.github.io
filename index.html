@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,182 +18,110 @@
       src="https://kit.fontawesome.com/8e98006f77.js"
       crossorigin="anonymous"
     ></script>
-    <style>
-      :root {
-        --accent-color: #00d8a5;
-        --accent2-color: #f2ea02;
-        --accent3-color: #e6248e;
-        --accent4-color: #2c62f8;
-        --primary-color: #1db954;
-        --dark-text-color: #ffffff;
-        --gray-text-color: #b3b3b3;
-        --button-padding-x: 20px;
-        --button-padding-y: 10px;
-        --font-family-body: 'Nunito', sans-serif;
-        --light-text-color: #000000;
-        --dark-border-color: #282828;
-        --light-border-color: #d9f8e7;
-        --font-family-heading: 'Poppins', sans-serif;
-        --button-rounded-radius: 50px;
-        --dark-background-color: #121212;
-        --light-background-color: #aaf0c8;
-        --medium-background-color: #8ee6b5;
-        --primary-button-text-color: #ffffff;
-        --secondary-button-bg-color: #181818;
-        --secondary-button-text-color: #ffffff;
-        --primary-button-hover-bg-color: #1ed760;
-        --primary-button-hover-text-color: #ffffff;
-        --secondary-button-hover-bg-color: #282828;
-        --secondary-button-hover-text-color: #ffffff;
-      }
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        border: none;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        background-color: var(--dark-background-color);
-        font-family: var(--font-family-body);
-        scroll-behavior: smooth;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-family-heading);
-      }
-      .modal-content {
-        max-height: 80vh;
-      }
-
-      /* --- NEW: Scroll Animation Styles --- */
-      /* Base class for elements that should animate */
-      .scroll-animate {
-        opacity: 0;
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        transform: translateY(20px);
-      }
-
-      /* Animation class - Fade in and slide up */
-      .scroll-animate.animate-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Optional: You can add variations, e.g., for elements sliding from the right */
-      .scroll-animate.slide-from-right {
-        opacity: 0;
-        transform: translateX(50px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      }
-      .scroll-animate.slide-from-right.animate-visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      /* ----------------------------------- */
-    </style>
-  </head>
-  <body class="h-full bg-[var(--dark-background-color)]">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+  <body class="bg-[var(--dark-background-color)] pb-[90px]">
     <div class="[font-family:var(--font-family-body)]">
+      
       <header
-  class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-50 backdrop-blur-lg bg-opacity-95 scroll-animate animate-visible"
-  id="global-header"
->
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
-      <div class="flex-shrink-0">
-        <a href="/" class="flex items-center">
-          <img
-            src="assets/belal-logo.png"
-            alt="Belal Ezat Personal Portfolio"
-            class="h-28 lg:h-36 w-auto"
-          />
-        </a>
-      </div>
+        class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-50 backdrop-blur-lg bg-opacity-95 scroll-animate animate-visible"
+        id="global-header"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+              <a href="/" class="flex items-center">
+                <img
+                  src="assets/belal-logo.png"
+                  alt="Belal Ezat Personal Portfolio"
+                  class="h-28 lg:h-36 w-auto"
+                />
+              </a>
+            </div>
 
-      <nav class="hidden lg:flex items-center space-x-8">
-        <a
-          href="#experience"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
-          >Experience</a
-        >
-        <a
-          href="#portfolio"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
-          >Portfolio</a
-        >
-        <a
-          href="#extracurriculars"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
-          >Extracurriculars</a
-        >
-        <a
-          href="#about"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
-          >Skills</a
-        >
-        <a
-          href="#contact"
-          class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-          >Contact Me</a
-        >
-        
-        <div class="ml-4">
-          <img
-            class="h-12 w-12 rounded-full object-cover"
-            src="assets/belalphoto.png"
-            alt="Belal Ezat"
-          />
+            <nav class="hidden lg:flex items-center space-x-8">
+              <a
+                href="#experience"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+                >Experience</a
+              >
+              <a
+                href="#portfolio"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+                >Portfolio</a
+              >
+              <a
+                href="#extracurriculars"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+                >Extracurriculars</a
+              >
+              <a
+                href="#about"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium"
+                >Skills</a
+              >
+              <a
+                href="#contact"
+                class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+                >Contact Me</a
+              >
+              
+              <div class="ml-4">
+                <img
+                  class="h-12 w-12 rounded-full object-cover"
+                  src="assets/belalphoto.png"
+                  alt="Belal Ezat"
+                />
+              </div>
+              </nav>
+
+            <div class="lg:hidden">
+              <button
+                id="mobile-menu-toggle"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] p-2"
+              >
+                <i class="fas fa-bars text-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          <nav
+            id="mobile-menu"
+            class="hidden lg:hidden bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-4"
+          >
+            <div class="flex flex-col space-y-4">
+              <a
+                href="#experience"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+                >Experience</a
+              >
+              <a
+                href="#portfolio"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+                >Portfolio</a
+              >
+              <a
+                href="#extracurriculars"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+                >Extracurriculars</a
+              >
+              <a
+                href="#about"
+                class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
+                >Skills</a
+              >
+              <a
+                href="#contact"
+                class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-full font-semibold transition-all duration-300 mx-4 text-center"
+                >Contact Me</a
+              >
+            </div>
+          </nav>
         </div>
-        </nav>
+      </header>
 
-      <div class="lg:hidden">
-        <button
-          id="mobile-menu-toggle"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] p-2"
-        >
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-      </div>
-    </div>
-
-    <nav
-      id="mobile-menu"
-      class="hidden lg:hidden bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-4"
-    >
-      <div class="flex flex-col space-y-4">
-        <a
-          href="#experience"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
-          >Experience</a
-        >
-        <a
-          href="#portfolio"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
-          >Portfolio</a
-        >
-        <a
-          href="#extracurriculars"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
-          >Extracurriculars</a
-        >
-        <a
-          href="#about"
-          class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2"
-          >Skills</a
-        >
-        <a
-          href="#contact"
-          class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-full font-semibold transition-all duration-300 mx-4 text-center"
-          >Contact Me</a
-        >
-      </div>
-    </nav>
-  </div>
-</header>
       <section
         class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden scroll-animate animate-visible"
         id="hero"
@@ -217,7 +145,7 @@
                 class="inline-flex items-center px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] rounded-full text-[var(--dark-text-color)] text-sm font-medium mb-6"
               >
                 <i class="fas fa-music text-[var(--primary-color)] mr-2"></i>
-                <span id="now-playing" class="transition-opacity duration-500">Now Playing: </span>
+                <span id="now-playing" class="transition-opacity duration-500">Listening... </span>
               </div>
               <h1
                 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dark-text-color)] mb-2 leading-tight"
@@ -280,44 +208,6 @@
           <a href="#portfolio"><i class="fas fa-chevron-down text-[var(--gray-text-color)] text-xl"></i></a>
         </div>
 
-        <style>
-          @keyframes float {
-            0%,
-            100% {
-              transform: translateY(0px) rotate(0deg);
-            }
-            50% {
-              transform: translateY(-20px) rotate(180deg);
-            }
-          }
-          @keyframes float-delayed {
-            0%,
-            100% {
-              transform: translateY(0px) rotate(0deg);
-            }
-            50% {
-              transform: translateY(-15px) rotate(-180deg);
-            }
-          }
-          @keyframes float-slow {
-            0%,
-            100% {
-              transform: translateY(0px) rotate(0deg);
-            }
-            50% {
-              transform: translateY(-10px) rotate(90deg);
-            }
-          }
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-          }
-          .animate-float-delayed {
-            animation: float-delayed 8s ease-in-out infinite;
-          }
-          .animate-float-slow {
-            animation: float-slow 10s ease-in-out infinite;
-          }
-        </style>
       </section>
 
       <section
@@ -337,6 +227,42 @@
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div
+              class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent5-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
+              data-modal-target="portfolio-info-modal"
+            >
+              <div class="relative mb-6">
+                <img
+                  src="assets/belal-logo.png"
+                  alt="Personal Portfolio Logo"
+                  class="w-full h-48 object-cover rounded-xl border border-[var(--dark-border-color)] p-4"
+                />
+              </div>
+              <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3 flex items-center justify-between">
+                <span>Personal Portfolio</span>
+                <div class="equalizer-container mr-2">
+                    <div class="equalizer" id="live-equalizer-project">
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                        <div class="bar bar-4"></div>
+                        <div class="bar bar-5"></div>
+                        <div class="bar bar-6"></div>
+                        <div class="bar bar-7"></div>
+                    </div>
+                </div>
+              </h3>
+              <p class="text-[var(--gray-text-color)] mb-4 flex-grow">
+                This dynamic web-based portfolio leverages modern front-end technologies for a smooth, high-performance user experience.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="px-2 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Tailwind CSS</span>
+                <span class="px-2 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">JavaScript</span>
+                <span class="px-2 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Intersection Observer</span>
+              </div>
+            </div>
+
             <div
               class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--primary-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
               data-modal-target="rhel-modal"
@@ -415,74 +341,6 @@
         </div>
       </section>
 
-      <div id="rhel-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-          <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-              <button data-modal-close="rhel-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                  <i class="fas fa-times text-2xl"></i>
-              </button>
-              <h3 class="text-2xl font-bold text-white mb-4">RHEL 9.5 Server Deployment, Hardening, and Monitoring</h3>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Docker</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Wazuh</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VPN</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Sysmon</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">SNMP</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VMWare</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Splunk</span>
-              </div>
-              <ul class="list-disc list-inside text-gray-300 space-y-3">
-                  <li>Designed and built a cross-platform home lab environment integrating RHEL, Fedora, and Windows systems, enabling real-world testing of security, monitoring, and VPN technologies.</li>
-                  <li>Deployed Nextcloud in a Docker container on RHEL for private cloud storage, managing persistent volumes, container networking, and secure web access across the LAN.</li>
-                  <li>Built a SIEM pipeline with Wazuh and Splunk, integrating syslog forwarding and custom alerts to monitor SSH and system events in real time.</li>
-                  <li>Configured WireGuard VPN for secure remote access with port forwarding and set up SNMP-based monitoring with SIEM integration, enhancing visibility and centralized control over server activity.</li>
-              </ul>
-          </div>
-      </div>
-
-      <div id="profpickr-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-          <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-              <button data-modal-close="profpickr-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                  <i class="fas fa-times text-2xl"></i>
-              </button>
-              <h3 class="text-2xl font-bold text-white mb-4">ProfPickr Hackathon Project (GirlHacks 2025)</h3>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">React.js</span>
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">FastAPI</span>
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">MongoDB</span>
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">Gemini API</span>
-              </div>
-              <ul class="list-disc list-inside text-gray-300 space-y-3">
-                  <li>Co-developed ProfPickr with a 4-person team, a platform that pulls NJIT course schedules each semester and integrates RateMyProfessor ratings to generate AI-powered professor recommendations.</li>
-                  <li>Independently set up and managed MongoDB connections, ensuring reliable data storage and integration with backend APIs for scalable performance.</li>
-                  <li>Led frontend development, designing and implementing React.js interfaces that let students search classes and view professor summaries.</li>
-                  <li>Delivered a unified platform combining course schedules, professor ratings, and AI insights, reducing class selection time by about 15-20 minutes per student while improving decision-making.</li>
-              </ul>
-          </div>
-      </div>
-
-      <div id="inventory-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-          <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-              <button data-modal-close="inventory-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                  <i class="fas fa-times text-2xl"></i>
-              </button>
-              <h3 class="text-2xl font-bold text-white mb-4">Full-Stack Inventory Management Website</h3>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">PHP</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">MySQL</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">JavaScript</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">HTML/CSS</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">AJAX</span>
-              </div>
-              <ul class="list-disc list-inside text-gray-300 space-y-3">
-                  <li>Architected MySQL databases for products and categories to optimize data integrity and retrieval efficiency.</li>
-                  <li>Implemented secure, session-based PHP forms for authentication and CRUD operations, integrated with MySQL for persistent backend functionality.</li>
-                  <li>Developed responsive front-end layout using HTML and CSS, with JavaScript to enable dynamic user interactions and real-time updates.</li>
-                  <li>Strengthened application security by enforcing input validation and sanitation, effectively mitigating SQL injection and XSS threats.</li>
-              </ul>
-          </div>
-      </div>
-
-
       <section
         class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden scroll-animate"
         id="experience"
@@ -495,9 +353,21 @@
               Work <span class="text-[var(--primary-color)]">Experience</span>
             </h2>
           </div>
+          
           <div class="max-w-3xl mx-auto">
             <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                <h3 class="text-2xl font-bold text-white">IT Specialist</h3>
+                <h3 class="text-2xl font-bold text-white equalizer-title-flex">
+                    <span>IT Specialist</span>
+                    <div class="equalizer" id="live-equalizer-exp">
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                        <div class="bar bar-4"></div>
+                        <div class="bar bar-5"></div>
+                        <div class="bar bar-6"></div>
+                        <div class="bar bar-7"></div>
+                    </div>
+                </h3>
                 <p class="text-lg text-[var(--primary-color)] font-semibold">Best Bet Computer</p>
                 <p class="text-md text-gray-400 mb-4">Sep 2025 - Present | Union, NJ</p>
                 <p class="text-gray-300">
@@ -517,7 +387,18 @@
               </div>
               <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
                   <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                      <h3 class="text-2xl font-bold text-white">Treasurer</h3>
+                      <h3 class="text-2xl font-bold text-white equalizer-title-flex">
+                          <span>Treasurer</span>
+                          <div class="equalizer" id="live-equalizer-umr">
+                              <div class="bar bar-1"></div>
+                              <div class="bar bar-2"></div>
+                              <div class="bar bar-3"></div>
+                              <div class="bar bar-4"></div>
+                              <div class="bar bar-5"></div>
+                              <div class="bar bar-6"></div>
+                              <div class="bar bar-7"></div>
+                          </div>
+                      </h3>
                       <p class="text-lg text-[var(--primary-color)] font-semibold">United Mission Relief (UMR) at NJIT</p>
                       <p class="text-md text-gray-400 mb-4">Sep 2025 - Present</p>
                       <p class="text-gray-300">
@@ -663,7 +544,7 @@
             </div>
       
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <a href="#contact-footer" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group">
+              <a href="#contact-section-footer" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group">
                 <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform duration-300"></i>
                 Start a Project
               </a>
@@ -733,7 +614,7 @@
 
       <footer
         class="code-section bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-16 scroll-animate"
-        id="contact-footer"
+        id="contact-section-footer"
       >
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid lg:grid-cols-4 gap-12 mb-12">
@@ -883,6 +764,131 @@
           </div>
         </div>
       </footer>
+      
+    <div id="media-player">
+        <div class="hidden md:flex items-center w-1/3">
+            <img src="assets/belal-icon.png" alt="Album Art" class="h-14 w-14 rounded-md mr-4 opacity-80"/>
+            <div>
+                <p class="text-sm font-semibold text-white">Belal's Personal Portfolio</p>
+                <p class="text-xs text-[var(--gray-text-color)]">Belal feat. Spotify</p>
+            </div>
+        </div>
+    
+        <div class="playback-controls w-full md:w-1/3 mx-auto">
+            <div class="flex items-center w-full mb-1">
+                <span class="text-xs text-[var(--gray-text-color)] w-8 text-left">0:00</span>
+                <div class="progress-bar-container mx-2">
+                    <div id="scroll-progress"></div>
+                </div>
+                <span class="text-xs text-[var(--gray-text-color)] w-8 text-right">END</span>
+            </div>
+    
+            <div class="flex items-center justify-center space-x-6 text-xl text-[var(--gray-text-color)]">
+                <i class="fas fa-random opacity-60"></i>
+                <i id="prev-section-btn" class="fas fa-backward hover:text-white cursor-pointer"></i>
+                <i class="fas fa-pause text-3xl text-white"></i>
+                <i id="next-section-btn" class="fas fa-forward hover:text-white cursor-pointer"></i>
+                <i class="fas fa-redo-alt opacity-60"></i>
+            </div>
+        </div>
+        
+        <div class="hidden md:flex w-1/3 justify-end items-center space-x-3">
+            <div class="equalizer" id="live-equalizer-player">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div>
+            </div>
+        </div>
+    </div>
+    <div id="rhel-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
+            <button data-modal-close="rhel-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-4">RHEL 9.5 Server Deployment, Hardening, and Monitoring</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Docker</span>
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Wazuh</span>
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VPN</span>
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Sysmon</span>
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">SNMP</span>
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VMWare</span>
+              <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Splunk</span>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-3">
+                <li>Designed and built a cross-platform home lab environment integrating RHEL, Fedora, and Windows systems, enabling real-world testing of security, monitoring, and VPN technologies.</li>
+                <li>Deployed Nextcloud in a Docker container on RHEL for private cloud storage, managing persistent volumes, container networking, and secure web access across the LAN.</li>
+                <li>Built a SIEM pipeline with Wazuh and Splunk, integrating syslog forwarding and custom alerts to monitor SSH and system events in real time.</li>
+                <li>Configured WireGuard VPN for secure remote access with port forwarding and set up SNMP-based monitoring with SIEM integration, enhancing visibility and centralized control over server activity.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="profpickr-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
+            <button data-modal-close="profpickr-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-4">ProfPickr Hackathon Project (GirlHacks 2025)</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">React.js</span>
+              <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">FastAPI</span>
+              <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">MongoDB</span>
+              <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">Gemini API</span>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-3">
+                <li>Co-developed ProfPickr with a 4-person team, a platform that pulls NJIT course schedules with RateMyProfessor ratings for AI-powered professor recommendations.</li>
+                <li>Independently set up and managed MongoDB connections, ensuring reliable data storage and integration with backend APIs for scalable performance.</li>
+                <li>Led frontend development, designing and implementing React.js interfaces that let students search classes and view professor summaries.</li>
+                <li>Delivered a unified platform combining course schedules, professor ratings, and AI insights, reducing class selection time by about 15-20 minutes per student while improving decision-making.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="inventory-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
+            <button data-modal-close="inventory-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-4">Full-Stack Inventory Management Website</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">PHP</span>
+              <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">MySQL</span>
+              <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">JavaScript</span>
+              <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">AJAX</span>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-3">
+                <li>Architected MySQL databases for products and categories to optimize data integrity and retrieval efficiency.</li>
+                <li>Implemented secure, session-based PHP forms for authentication and CRUD operations, integrated with MySQL for persistent backend functionality.</li>
+                <li>Developed responsive front-end layout using HTML and CSS, with JavaScript to enable dynamic user interactions and real-time updates.</li>
+                <li>Strengthened application security by enforcing input validation and sanitation, effectively mitigating SQL injection and XSS threats.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="portfolio-info-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
+            <button data-modal-close="portfolio-info-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-4">Personal Portfolio (You Are Here)</h3>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Tailwind CSS</span>
+              <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">JavaScript (ES6)</span>
+              <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Intersection Observer API</span>
+              <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Mobile-First Design</span>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-3">
+                <li>Developed a fully responsive, single-page application (SPA) portfolio website using modular HTML/CSS/JS.</li>
+                <li>Utilized Tailwind CSS for component styling, ensuring rapid, theme-consistent front-end development.</li>
+                <li>Incorporated smooth scroll-triggered animations and a dynamic Equalizer visual using the Intersection Observer API for an engaging UX.</li>
+                <li>Applied advanced JavaScript for the continuous "Listening..." loop in the hero section, maintaining a strong music-streaming theme.</li>
+            </ul>
+        </div>
+    </div>
+    
     </div>
     <script src="scripts.js"></script>
   </body>
