@@ -126,8 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const equalizerIds = [
         'live-equalizer-project',
         'live-equalizer-exp',
-        'live-equalizer-umr',
-        'live-equalizer-player'
+        'live-equalizer-umr'
     ];
 
     // Function to generate a new, random height (5px to 30px, max container height is 30px)
@@ -168,87 +167,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // --- END DYNAMIC EQUALIZER LOGIC ---
-
-// --- Scroll Progress Bar (Media Player) Logic ---
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollProgress = document.getElementById('scroll-progress');
-
-    // Function to calculate and update the scroll progress
-    function updateScrollProgress() {
-        if (scrollProgress) {
-            // Calculate the total scrollable height of the document
-            const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            // Get the current scroll position using the more reliable window.scrollY
-            const scrolled = window.scrollY;
-
-            // Calculate percentage (handle division by zero if totalHeight is 0)
-            const percentage = totalHeight > 0 ? (scrolled / totalHeight) * 100 : 0;
-            
-            // Apply the percentage to the progress bar width
-            scrollProgress.style.width = `${percentage}%`;
-        }
-    }
-
-    // Attach the scroll listener to the window
-    window.addEventListener('scroll', updateScrollProgress);
-    
-    // Run once on load to initialize the bar position
-    updateScrollProgress();
-});
-// --- END SCROLL PROGRESS BAR LOGIC ---
-
-// --- Media Player Section Navigation ---
-document.addEventListener('DOMContentLoaded', function () {
-    const nextButton = document.getElementById('next-section-btn');
-    const prevButton = document.getElementById('prev-section-btn');
-
-    // Get all sections you want to navigate between
-    const sections = document.querySelectorAll('section.code-section');
-
-    const getVisibleSectionIndex = () => {
-        let smallestVisibleTop = Infinity;
-        let currentSectionIndex = -1;
-
-        sections.forEach((section, index) => {
-            const rect = section.getBoundingClientRect();
-            // Check if the section is at all visible in the viewport
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                // Find the section closest to the top of the viewport
-                if (rect.top >= 0 && rect.top < smallestVisibleTop) {
-                    smallestVisibleTop = rect.top;
-                    currentSectionIndex = index;
-                }
-            }
-        });
-        // If no section top is in view (e.g., scrolled halfway), find the one currently in the middle
-        if (currentSectionIndex === -1) {
-             sections.forEach((section, index) => {
-                const rect = section.getBoundingClientRect();
-                 if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                    currentSectionIndex = index;
-                }
-             });
-        }
-        return currentSectionIndex;
-    };
-
-    if(nextButton) {
-        nextButton.addEventListener('click', () => {
-            let currentIndex = getVisibleSectionIndex();
-            let nextIndex = currentIndex + 1;
-            if (nextIndex < sections.length) {
-                sections[nextIndex].scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    }
-    
-    if(prevButton) {
-        prevButton.addEventListener('click', () => {
-            let currentIndex = getVisibleSectionIndex();
-            let prevIndex = currentIndex - 1;
-            if (prevIndex >= 0) {
-                sections[prevIndex].scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    }
-});
