@@ -167,39 +167,81 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // --- END DYNAMIC EQUALIZER LOGIC ---
 
-// --- NEW: Project Sorting Logic ---
+// --- NEW: Project Filtering and Sorting Logic ---
 document.addEventListener('DOMContentLoaded', function () {
-    const sortDateBtn = document.getElementById('sort-date-btn');
-    const sortTitleBtn = document.getElementById('sort-title-btn');
+    const filterButtonsContainer = document.getElementById('filter-buttons');
     const portfolioGrid = document.getElementById('portfolio-grid');
 
-    const sortProjects = (criteria) => {
-        const projects = Array.from(portfolioGrid.querySelectorAll('.project-card'));
+    // Stop if the necessary elements don't exist
+    if (!filterButtonsContainer || !portfolioGrid) {
+        return;
+    }
 
-        projects.sort((a, b) => {
-            if (criteria === 'date') {
-                const dateA = new Date(a.dataset.date);
-                const dateB = new Date(b.dataset.date);
-                return dateB - dateA; // Sort descending (newest first)
-            }
-            if (criteria === 'title') {
-                const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
-                const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
-                return titleA.localeCompare(titleB); // Sort ascending (A-Z)
-            }
-            return 0;
+    const projects = Array.from(portfolioGrid.querySelectorAll('.project-card'));
+
+    /**
+     * Sorts the project cards in the DOM based on their data-date attribute.
+     * Sorts in descending order (newest first).
+     */
+    const sortByDate = () => {
+        // Create a sorted copy of the projects array
+        const sortedProjects = [...projects].sort((a, b) => {
+            return new Date(b.dataset.date) - new Date(a.dataset.date);
         });
-
-        // Re-append sorted projects to the grid
-        projects.forEach(project => portfolioGrid.appendChild(project));
+        
+        // Re-append the sorted projects to the grid container
+        sortedProjects.forEach(project => portfolioGrid.appendChild(project));
     };
 
-    if (sortDateBtn && sortTitleBtn && portfolioGrid) {
-        sortDateBtn.addEventListener('click', () => sortProjects('date'));
-        sortTitleBtn.addEventListener('click', () => sortProjects('title'));
+    /**
+     * Filters projects by showing/hiding them based on a category.
+     * @param {string} category - The category to filter by (e.g., 'full-stack').
+     */
+    const filterProjects = (category) => {
+        projects.forEach(project => {
+            const projectCategories = project.dataset.category ? project.dataset.category.split(' ') : [];
+            const matchesCategory = projectCategories.includes(category);
 
-        // Initially sort by date on page load
-        sortProjects('date');
+            // If the category is 'all' or the project matches the category, show it. Otherwise, hide it.
+            if (category === 'all' || matchesCategory) {
+                project.classList.remove('hidden');
+            } else {
+                project.classList.add('hidden');
+            }
+        });
+    };
+
+    // Add a single event listener to the button container for efficiency
+    filterButtonsContainer.addEventListener('click', (e) => {
+        // Target only button clicks
+        const button = e.target.closest('button[data-filter]');
+        if (!button) return;
+
+        const filter = button.dataset.filter;
+
+        // Update active class on buttons
+        const allButtons = filterButtonsContainer.querySelectorAll('.filter-btn');
+        allButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Execute sorting or filtering based on the button clicked
+        if (filter === 'most-recent') {
+            sortByDate();
+            // Ensure all projects are visible after sorting
+            projects.forEach(project => project.classList.remove('hidden'));
+        } else {
+            filterProjects(filter);
+        }
+    });
+
+    // --- Initial Page Load Setup ---
+    // Set the 'Most Recent' button as active by default
+    const mostRecentBtn = filterButtonsContainer.querySelector('[data-filter="most-recent"]');
+    if (mostRecentBtn) {
+        mostRecentBtn.classList.add('active');
     }
+    // Initially sort by date and show all projects
+    sortByDate();
+    projects.forEach(project => project.classList.remove('hidden'));
 });
-// --- END PROJECT SORTING LOGIC ---
+// --- END PROJECT FILTERING LOGIC ---

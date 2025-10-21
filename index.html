@@ -227,21 +227,32 @@
             </p>
           </div>
 
-          <div class="flex justify-center items-center gap-4 mb-12">
-            <span class="text-[var(--gray-text-color)] font-semibold">Sort by:</span>
-            <button id="sort-date-btn" class="px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
-              Most Recent
-            </button>
-            <button id="sort-title-btn" class="px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
-              Title (A-Z)
-            </button>
+          <div id="filter-buttons" class="flex justify-center items-center flex-wrap gap-4 mb-12">
+              <button data-filter="most-recent" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
+                  Most Recent
+              </button>
+              <button data-filter="all" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
+                  All Projects
+              </button>
+              <button data-filter="ai-ml" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
+                  AI & Machine Learning
+              </button>
+              <button data-filter="full-stack" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
+                  Full-Stack Development
+              </button>
+              <button data-filter="it-cybersecurity" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
+                  IT & Cybersecurity
+              </button>
+              <button data-filter="frontend" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">
+                  Frontend & Web Design
+              </button>
           </div>
 
           <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <div
               class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent4-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
-              data-modal-target="clinicsense-modal" data-date="2025-10-20"
+              data-modal-target="clinicsense-modal" data-date="2025-10-20" data-category="ai-ml full-stack"
             >
               <div class="relative mb-6">
                 <img
@@ -266,7 +277,7 @@
 
             <div
               class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent5-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
-              data-modal-target="portfolio-info-modal" data-date="2025-08-15"
+              data-modal-target="portfolio-info-modal" data-date="2025-08-15" data-category="frontend"
             >
               <div class="relative mb-6">
                 <img
@@ -301,7 +312,7 @@
 
             <div
               class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--primary-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
-              data-modal-target="rhel-modal" data-date="2025-06-01"
+              data-modal-target="rhel-modal" data-date="2025-06-01" data-category="it-cybersecurity"
             >
               <div class="relative mb-6">
                 <img
@@ -326,7 +337,7 @@
 
             <div
               class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
-              data-modal-target="profpickr-modal" data-date="2025-02-10"
+              data-modal-target="profpickr-modal" data-date="2025-02-10" data-category="ai-ml full-stack"
             >
               <div class="relative mb-6">
                 <img
@@ -350,7 +361,7 @@
             
             <div
               class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent2-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col"
-              data-modal-target="inventory-modal" data-date="2024-12-05"
+              data-modal-target="inventory-modal" data-date="2024-12-05" data-category="full-stack"
             >
               <div class="relative mb-6">
                 <img
