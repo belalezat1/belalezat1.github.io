@@ -48,28 +48,24 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 80vh;
 }
 
-/* --- Scroll Animation Styles --- */
+/* --- Scroll Animation Styles (Option 1: Fade Up & In) --- */
 .scroll-animate {
   opacity: 0;
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-  transform: translateY(20px);
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .scroll-animate.animate-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
-
-/* --- UPDATED SLIDE-IN TRANSITION --- */
 .scroll-animate.slide-from-right {
   opacity: 0;
-  /* Start slightly smaller, rotated, and off-screen */
-  transform: translateX(50px) scale(0.95) rotate(-3deg); 
-  transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateX(50px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .scroll-animate.slide-from-right.animate-visible {
   opacity: 1;
-  /* End at normal size, rotation, and position */
-  transform: translateX(0) scale(1) rotate(0deg);
+  transform: translateX(0) scale(1);
 }
 /* ----------------------------------- */
 

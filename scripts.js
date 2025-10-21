@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to animate a single bar's height over a random duration
     function animateBar(bar) {
-        // Random duration between 500ms and 1000ms (Faster as requested)
+        // Random duration between 500ms and 1000ms
         const duration = 500 + Math.random() * 500; 
         // Target a new random height
         const newHeight = getRandomHeight();
@@ -143,8 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
         bar.style.transition = `height ${duration}ms ease-in-out`;
         bar.style.height = newHeight;
 
-        // Set a timer to animate it again slightly before the current transition finishes (60% duration).
-        // This continuous, asynchronous randomization makes the loop seamless and unpredictable.
+        // Set a timer to animate it again slightly before the current transition finishes
         setTimeout(() => {
             animateBar(bar);
         }, duration * 0.6); 
@@ -167,3 +166,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // --- END DYNAMIC EQUALIZER LOGIC ---
+
+// --- NEW: Project Sorting Logic ---
+document.addEventListener('DOMContentLoaded', function () {
+    const sortDateBtn = document.getElementById('sort-date-btn');
+    const sortTitleBtn = document.getElementById('sort-title-btn');
+    const portfolioGrid = document.getElementById('portfolio-grid');
+
+    const sortProjects = (criteria) => {
+        const projects = Array.from(portfolioGrid.querySelectorAll('.project-card'));
+
+        projects.sort((a, b) => {
+            if (criteria === 'date') {
+                const dateA = new Date(a.dataset.date);
+                const dateB = new Date(b.dataset.date);
+                return dateB - dateA; // Sort descending (newest first)
+            }
+            if (criteria === 'title') {
+                const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
+                const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
+                return titleA.localeCompare(titleB); // Sort ascending (A-Z)
+            }
+            return 0;
+        });
+
+        // Re-append sorted projects to the grid
+        projects.forEach(project => portfolioGrid.appendChild(project));
+    };
+
+    if (sortDateBtn && sortTitleBtn && portfolioGrid) {
+        sortDateBtn.addEventListener('click', () => sortProjects('date'));
+        sortTitleBtn.addEventListener('click', () => sortProjects('title'));
+
+        // Initially sort by date on page load
+        sortProjects('date');
+    }
+});
+// --- END PROJECT SORTING LOGIC ---
