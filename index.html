@@ -7,7 +7,7 @@
     <link rel="icon" href="assets/belal-icon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/8e98006f77.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -94,97 +94,130 @@
 
     <section class="code-section bg-[var(--dark-background-color)] py-20 relative scroll-animate slide-from-right" id="portfolio">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-16 lg:mb-24">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6">
-                    My <span class="text-[var(--primary-color)]">Portfolio</span>
+                    Featured <span class="text-[var(--primary-color)]">Projects</span>
                 </h2>
-                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">A collection of my projects. Click on a project to see more details.</p>
+                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">A sequential journey through my most impactful work.</p>
             </div>
-            <div id="filter-buttons" class="flex justify-center items-center flex-wrap gap-4 mb-12">
-                <button data-filter="most-recent" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">Most Recent</button>
-                <button data-filter="all" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">All Projects</button>
-                <button data-filter="ai-ml" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">AI & Machine Learning</button>
-                <button data-filter="full-stack" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">Full-Stack Development</button>
-                <button data-filter="it-cybersecurity" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">IT & Cybersecurity</button>
-                <button data-filter="frontend" class="filter-btn px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] text-white rounded-full hover:bg-[var(--primary-color)] transition-colors duration-300">Frontend & Web Design</button>
-            </div>
-            <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent4-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col" data-modal-target="clinicsense-modal" data-date="2025-10-20" data-category="ai-ml full-stack">
-                    <div class="relative mb-6">
-                        <img src="assets/clinicsense.jpeg" alt="ClinicSense Project Architecture" class="w-full h-48 object-cover rounded-xl" />
+
+            <div class="relative w-full max-w-6xl mx-auto pb-24">
+                
+                <div class="sticky z-10 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-90px)] lg:max-h-none top-[90px] lg:top-[100px]">
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-16 shrink-0">
+                        <img src="assets/belal-logo.png" alt="Personal Portfolio Logo" class="w-full h-full object-contain drop-shadow-2xl" />
                     </div>
-                    <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">ClinicSense</h3>
-                    <p class="text-[var(--gray-text-color)] mb-4 flex-grow">An AI platform that analyzes medical student presentations, provides rubric-based feedback, suggests improvements, and generates an optimized version.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">AWS Bedrock</span>
-                        <span class="px-2 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Claude 3.5</span>
-                        <span class="px-2 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Flask</span>
-                        <span class="px-2 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">React</span>
-                    </div>
-                </div>
-                <div class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent5-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col" data-modal-target="portfolio-info-modal" data-date="2025-08-15" data-category="frontend">
-                    <div class="relative mb-6">
-                        <img src="assets/belal-logo.png" alt="Personal Portfolio Logo" class="w-full h-48 object-cover rounded-xl border border-[var(--dark-border-color)] p-4" />
-                    </div>
-                    <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3 flex items-center justify-between">
-                        <span>Personal Portfolio</span>
-                        <div class="equalizer-container mr-2">
-                            <div class="equalizer" id="live-equalizer-project">
-                                <div class="bar bar-1"></div>
-                                <div class="bar bar-2"></div>
-                                <div class="bar bar-3"></div>
-                                <div class="bar bar-4"></div>
-                                <div class="bar bar-5"></div>
-                                <div class="bar bar-6"></div>
-                                <div class="bar bar-7"></div>
+                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+                        <div class="flex items-start sm:items-center justify-between mb-4 lg:mb-6">
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">Dynamic Personal Portfolio</h3>
+                            <div class="equalizer-container ml-4 hidden sm:flex">
+                                <div class="equalizer" id="live-equalizer-project">
+                                    <div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div><div class="bar bar-4"></div><div class="bar bar-5"></div><div class="bar bar-6"></div><div class="bar bar-7"></div>
+                                </div>
                             </div>
                         </div>
-                    </h3>
-                    <p class="text-[var(--gray-text-color)] mb-4 flex-grow">This dynamic web-based portfolio leverages modern front-end technologies for a smooth, high-performance user experience.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Tailwind CSS</span>
-                        <span class="px-2 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">JavaScript</span>
-                        <span class="px-2 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Intersection Observer</span>
+                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Tailwind CSS</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">JavaScript (ES6)</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Intersection Observer API</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Mobile-First Design</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <li>Developed a fully responsive, single-page application (SPA) portfolio website using modular HTML/CSS/JS.</li>
+                            <li>Utilized Tailwind CSS for component styling, ensuring rapid, theme-consistent front-end development.</li>
+                            <li>Incorporated smooth scroll-triggered animations and a dynamic Equalizer visual using the Intersection Observer API for an engaging UX.</li>
+                            <li>Applied advanced JavaScript for the continuous "Listening..." loop in the hero section, maintaining a strong music-streaming theme.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--primary-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col" data-modal-target="rhel-modal" data-date="2025-06-01" data-category="it-cybersecurity">
-                    <div class="relative mb-6">
-                        <img src="assets/rhel.png" alt="Server Infrastructure" class="w-full h-48 object-cover rounded-xl" />
+
+                <div class="sticky z-20 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-100px)] lg:max-h-none top-[100px] lg:top-[120px]">
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
+                        <img src="assets/clinicsense.jpeg" alt="ClinicSense Project Architecture" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
-                    <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">RHEL 9.5 Server Deployment, Hardening, and Monitoring</h3>
-                    <p class="text-[var(--gray-text-color)] mb-4 flex-grow">Built a home lab with RHEL 9.5 to deploy a private cloud using Nextcloud and Docker, configured a SIEM pipeline with Wazuh/Splunk, and secured remote access with a WireGuard VPN.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Docker</span>
-                        <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Wazuh</span>
-                        <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VPN</span>
-                        <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">SNMP</span>
-                    </div>
-                </div>
-                <div class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col" data-modal-target="profpickr-modal" data-date="2025-02-10" data-category="ai-ml full-stack">
-                    <div class="relative mb-6">
-                        <img src="assets/profpickr.png" alt="ProfPickr Project" class="w-full h-48 object-cover rounded-xl" />
-                    </div>
-                    <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">ProfPickr Hackathon Project (GirlHacks 2025)</h3>
-                    <p class="text-[var(--gray-text-color)] mb-4 flex-grow">Co-developed a platform that integrates NJIT course schedules with RateMyProfessor ratings to generate AI-powered professor recommendations. Led frontend development with React.js.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">React.js</span>
-                        <span class="px-2 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">FastAPI</span>
-                        <span class="px-2 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">MongoDB</span>
+                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ClinicSense: AI-Powered Clinical Feedback</h3>
+                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">React</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Flask</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Celery</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Redis</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">AWS Bedrock (Claude 3.5)</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">AWS S3 & DynamoDB</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <li>Engineered a platform for medical students to upload clinical presentations and receive instant, rubric-based analysis, actionable recommendations, and an AI-generated exemplar version.</li>
+                            <li>Architected a scalable, asynchronous backend with Flask, Celery, and Redis to manage a multimodal data processing pipeline (video, audio, text).</li>
+                            <li>Integrated AWS Bedrock for generative AI evaluation, AWS Transcribe for speech-to-text, and AWS Comprehend for clinical entity extraction.</li>
+                            <li>Developed a React frontend for user interaction and data visualization, connected to a robust cloud infrastructure on AWS.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="project-card bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent2-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group cursor-pointer flex flex-col" data-modal-target="inventory-modal" data-date="2024-12-05" data-category="full-stack">
-                    <div class="relative mb-6">
-                        <img src="assets/sportshop.png" alt="Screenshot of Board Sports Apparel Shop Inventory Management system" class="w-full h-48 object-cover rounded-xl" />
+
+                <div class="sticky z-30 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-110px)] lg:max-h-none top-[110px] lg:top-[140px]">
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
+                        <img src="assets/profpickr.png" alt="ProfPickr Project" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
-                    <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">Full-Stack Inventory Management Website</h3>
-                    <p class="text-[var(--gray-text-color)] mb-4 flex-grow">Architected a MySQL database and developed a secure, full-stack application using PHP for backend CRUD operations and a responsive HTML/CSS/JavaScript front-end.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">PHP</span>
-                        <span class="px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">MySQL</span>
-                        <span class="px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">JavaScript</span>
-                        <span class="px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">AJAX</span>
+                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ProfPickr (GirlHacks 2025)</h3>
+                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">React.js</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">FastAPI</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">MongoDB</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">Gemini API</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <li>Co-developed ProfPickr with a 4-person team, a platform that pulls NJIT course schedules with RateMyProfessor ratings for AI-powered professor recommendations.</li>
+                            <li>Independently set up and managed MongoDB connections, ensuring reliable data storage and integration with backend APIs for scalable performance.</li>
+                            <li>Led frontend development, designing and implementing React.js interfaces that let students search classes and view professor summaries.</li>
+                            <li>Delivered a unified platform combining data sets, reducing class selection time by about 15-20 minutes per student while improving decision-making.</li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="sticky z-40 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-120px)] lg:max-h-none top-[120px] lg:top-[160px]">
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
+                        <img src="assets/rhel.png" alt="Server Infrastructure" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
+                    </div>
+                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">RHEL 9.5 Server Deployment & SIEM</h3>
+                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">Docker & Nextcloud</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">Wazuh & Splunk</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">WireGuard VPN</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">VMWare</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">SNMP & Sysmon</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <li>Designed and built a cross-platform home lab environment integrating RHEL, Fedora, and Windows systems, enabling real-world testing of security, monitoring, and VPN technologies.</li>
+                            <li>Deployed Nextcloud in a Docker container on RHEL for private cloud storage, managing persistent volumes, container networking, and secure web access across the LAN.</li>
+                            <li>Built a SIEM pipeline with Wazuh and Splunk, integrating syslog forwarding and custom alerts to monitor SSH and system events in real time.</li>
+                            <li>Configured WireGuard VPN for secure remote access with port forwarding and set up SNMP-based monitoring.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sticky z-50 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-130px)] lg:max-h-none top-[130px] lg:top-[180px]">
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
+                        <img src="assets/sportshop.png" alt="Board Sports Apparel Shop Inventory" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
+                    </div>
+                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">Full-Stack Inventory Management</h3>
+                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">PHP</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">MySQL</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">JavaScript (AJAX)</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">HTML/CSS</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <li>Architected MySQL databases for products and categories to optimize data integrity and retrieval efficiency.</li>
+                            <li>Implemented secure, session-based PHP forms for authentication and CRUD operations, integrated with MySQL for persistent backend functionality.</li>
+                            <li>Developed responsive front-end layout using HTML and CSS, with JavaScript to enable dynamic user interactions and real-time updates.</li>
+                            <li>Strengthened application security by enforcing input validation and sanitation, effectively mitigating SQL injection and XSS threats.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -198,22 +231,19 @@
             </div>
             <div class="max-w-3xl mx-auto">
                 <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-white equalizer-title-flex">
-                        <span>IT Specialist</span>
-                        <div class="equalizer" id="live-equalizer-exp">
-                            <div class="bar bar-1"></div>
-                            <div class="bar bar-2"></div>
-                            <div class="bar bar-3"></div>
-                            <div class="bar bar-4"></div>
-                            <div class="bar bar-5"></div>
-                            <div class="bar bar-6"></div>
-                            <div class="bar bar-7"></div>
-                        </div>
-                    </h3>
+                    <h3 class="text-2xl font-bold text-white">IT Specialist</h3>
                     <p class="text-lg text-[var(--primary-color)] font-semibold">Best Bet Computer</p>
-                    <p class="text-md text-gray-400 mb-4">Sep 2025 - Present | Union, NJ</p>
+                    <p class="text-md text-gray-400 mb-4">Sep 2025 - Dec 2025 | Union, NJ</p>
                     <p class="text-gray-300">
                         Provided comprehensive IT support by deploying and configuring hardware at client sites, managing multiple client websites to improve performance and uptime, and remotely resolving complex software issues to significantly reduce system downtime.
+                    </p>
+                </div>
+                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)] mt-8">
+                    <h3 class="text-2xl font-bold text-white">Property Manager</h3>
+                    <p class="text-lg text-[var(--primary-color)] font-semibold">Rock Properties</p>
+                    <p class="text-md text-gray-400 mb-4">Nov 2025 – Feb 2026 | East Orange, NJ</p>
+                    <p class="text-gray-300">
+                        Managed regulatory compliance and digital recordkeeping for Section 8/HUD and LIHTC properties, generated monthly MUI reports and maintained tenant ledgers while collaborating with bookkeeping for financial accuracy, and oversaw capital projects and maintenance workflows including utility access and violation remediation.
                     </p>
                 </div>
             </div>
@@ -232,19 +262,25 @@
                     <h3 class="text-2xl font-bold text-white equalizer-title-flex">
                         <span>Treasurer</span>
                         <div class="equalizer" id="live-equalizer-umr">
-                            <div class="bar bar-1"></div>
-                            <div class="bar bar-2"></div>
-                            <div class="bar bar-3"></div>
-                            <div class="bar bar-4"></div>
-                            <div class="bar bar-5"></div>
-                            <div class="bar bar-6"></div>
-                            <div class="bar bar-7"></div>
+                            <div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div><div class="bar bar-4"></div><div class="bar bar-5"></div><div class="bar bar-6"></div><div class="bar bar-7"></div>
                         </div>
                     </h3>
                     <p class="text-lg text-[var(--primary-color)] font-semibold">United Mission Relief (UMR) at NJIT</p>
                     <p class="text-md text-gray-400 mb-4">Sep 2025 - Present</p>
                     <p class="text-gray-300">
                         Managed the club’s finances by developing and overseeing budgets, coordinating cost-effective events, and maintaining accurate financial records for the executive board.
+                    </p>
+                    <hr class="border-[var(--dark-border-color)] my-6" />
+                    <h3 class="text-2xl font-bold text-white equalizer-title-flex mt-6">
+                        <span>Senior Hacker</span>
+                        <div class="equalizer" id="live-equalizer-nicc">
+                            <div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div><div class="bar bar-4"></div><div class="bar bar-5"></div><div class="bar bar-6"></div><div class="bar bar-7"></div>
+                        </div>
+                    </h3>
+                    <p class="text-lg text-[var(--primary-color)] font-semibold">NJIT Information & Cybersecurity Club (NICC)</p>
+                    <p class="text-md text-gray-400 mb-4">Sep 2025 – Present</p>
+                    <p class="text-gray-300">
+                        Developed and deployed CTF challenges for JerseyCTF centered on web application exploitation and open-source intelligence, leveraging tools such as Burp Suite, OWASP ZAP, Wireshark, and custom Python scripts.
                     </p>
                 </div>
                 <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
@@ -253,67 +289,25 @@
                         <div>
                             <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Certifications</h4>
                             <ul class="list-none text-gray-300 space-y-4">
-                                <li class="flex items-start">
-                                    <i class="fas fa-certificate text-blue-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">CompTIA Network+</p>
-                                        <p class="text-sm text-gray-400">September 2025</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-certificate text-blue-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">CompTIA Security+</p>
-                                        <p class="text-sm text-gray-400">In Progress - TBD</p>
-                                    </div>
-                                </li>
+                                <li class="flex items-start"><i class="fas fa-certificate text-blue-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">CompTIA Network+</p><p class="text-sm text-gray-400">September 2025</p></div></li>
+                                <li class="flex items-start"><i class="fas fa-certificate text-blue-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">CompTIA Security+</p><p class="text-sm text-gray-400">In Progress - TBD</p></div></li>
                             </ul>
                         </div>
                         <hr class="border-[var(--dark-border-color)]">
                         <div>
                             <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Hackathons</h4>
                             <ul class="list-none text-gray-300 space-y-4">
-                                <li class="flex items-start">
-                                    <i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">RU Health Hacks</p>
-                                        <p class="text-sm text-gray-400">3rd Place (AWS MedEd Track)</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-laptop-code text-green-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">GirlHacks 2025</p>
-                                        <p class="text-sm text-gray-400">Participant</p>
-                                    </div>
-                                </li>
+                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">RU Health Hacks</p><p class="text-sm text-gray-400">3rd Place (AWS MedEd Track)</p></div></li>
+                                <li class="flex items-start"><i class="fas fa-laptop-code text-green-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">GirlHacks 2025</p><p class="text-sm text-gray-400">Participant</p></div></li>
                             </ul>
                         </div>
                         <hr class="border-[var(--dark-border-color)]">
                         <div>
                             <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Capture The Flag (CTF)</h4>
                             <ul class="list-none text-gray-300 space-y-4">
-                                <li class="flex items-start">
-                                    <i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">ISC2NJ Incident Response</p>
-                                        <p class="text-sm text-gray-400">1st Place</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">Pros v Joes CTF</p>
-                                        <p class="text-sm text-gray-400">3rd Place</p>
-                                    </div>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i>
-                                    <div>
-                                        <p class="font-semibold text-white">ISC2NJ CTF</p>
-                                        <p class="text-sm text-gray-400">1st Place</p>
-                                    </div>
-                                </li>
+                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">ISC2NJ Incident Response</p><p class="text-sm text-gray-400">1st Place</p></div></li>
+                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">Pros v Joes CTF</p><p class="text-sm text-gray-400">3rd Place</p></div></li>
+                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">ISC2NJ CTF</p><p class="text-sm text-gray-400">1st Place</p></div></li>
                             </ul>
                         </div>
                     </div>
@@ -334,10 +328,7 @@
             </div>
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-8 border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-[var(--dark-text-color)] mb-8 flex items-center">
-                        <i class="fas fa-code text-[var(--primary-color)] mr-3"></i>
-                        Languages
-                    </h3>
+                    <h3 class="text-2xl font-bold text-[var(--dark-text-color)] mb-8 flex items-center"><i class="fas fa-code text-[var(--primary-color)] mr-3"></i>Languages</h3>
                     <div class="flex flex-wrap gap-3">
                         <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Python</span>
                         <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Java</span>
@@ -353,10 +344,7 @@
                 </div>
                 <div class="space-y-8">
                     <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)]">
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center">
-                            <i class="fas fa-tools text-[var(--primary-color)] mr-3"></i>
-                            Developer Tools
-                        </h3>
+                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center"><i class="fas fa-tools text-[var(--primary-color)] mr-3"></i>Developer Tools</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">VS Code</span>
                             <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Eclipse</span>
@@ -367,10 +355,7 @@
                         </div>
                     </div>
                     <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)]">
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center">
-                            <i class="fas fa-cogs text-[var(--primary-color)] mr-3"></i>
-                            Technologies/Frameworks
-                        </h3>
+                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center"><i class="fas fa-cogs text-[var(--primary-color)] mr-3"></i>Technologies/Frameworks</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">React</span>
                             <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Node.js</span>
@@ -407,13 +392,10 @@
                     </div>
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight">
                         Let's Create Something
-                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">
-                            Amazing Together
-                        </span>
+                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Amazing Together</span>
                     </h2>
                     <p class="text-lg sm:text-xl text-[var(--gray-text-color)] leading-relaxed">
-                        Ready to bring your ideas to life? Let's discuss your next project and
-                        create digital experiences that truly resonate with your audience.
+                        Whether you are a student, recruiter or fellow developer, feel free to reach out for collaborations, project inquiries, or just to connect!
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -431,41 +413,25 @@
                         <div class="w-16 h-16 bg-[var(--primary-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-envelope text-[var(--primary-color)] text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">
-                            Email Me
-                        </h3>
-                        <p class="text-[var(--gray-text-color)] mb-4">
-                            Get in touch for project inquiries
-                        </p>
-                        <a href="mailto:belalezat05@gmail.com" class="text-[var(--primary-color)] hover:text-[var(--primary-button-hover-bg-color)] font-semibold transition-colors duration-300">
-                            belalezat05@gmail.com
-                        </a>
+                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">Email Me</h3>
+                        <p class="text-[var(--gray-text-color)] mb-4">Get in touch for project inquiries</p>
+                        <a href="mailto:belalezat05@gmail.com" class="text-[var(--primary-color)] hover:text-[var(--primary-button-hover-bg-color)] font-semibold transition-colors duration-300">belalezat05@gmail.com</a>
                     </div>
                     <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent-color)] transition-all duration-300 transform hover:scale-105">
                         <div class="w-16 h-16 bg-[var(--accent-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fab fa-linkedin text-[var(--accent-color)] text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">
-                            LinkedIn
-                        </h3>
-                        <p class="text-[var(--gray-text-color)] mb-4">
-                            Connect professionally
-                        </p>
-                        <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="text-[var(--accent-color)] hover:text-opacity-80 font-semibold transition-colors duration-300">
-                            /in/belal-ezat
-                        </a>
+                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">LinkedIn</h3>
+                        <p class="text-[var(--gray-text-color)] mb-4">Connect professionally</p>
+                        <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="text-[var(--accent-color)] hover:text-opacity-80 font-semibold transition-colors duration-300">/in/belal-ezat</a>
                     </div>
                     <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent3-color)] transition-all duration-300 transform hover:scale-105">
                         <div class="w-16 h-16 bg-[var(--accent3-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                             <i class="fas fa-book text-[var(--accent3-color)] text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">
-                            GitBook
-                        </h3>
+                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">GitBook</h3>
                         <p class="text-[var(--gray-text-color)] mb-4">View my project documentation</p>
-                        <a href="https://belal-ezat.gitbook.io/projects/" target="_blank" class="text-[var(--accent3-color)] hover:text-opacity-80 font-semibold transition-colors duration-300">
-                            /projects
-                        </a>
+                        <a href="https://belal-ezat.gitbook.io/projects/" target="_blank" class="text-[var(--accent3-color)] hover:text-opacity-80 font-semibold transition-colors duration-300">/projects</a>
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] rounded-2xl p-8 text-[var(--dark-text-color)]">
@@ -489,8 +455,7 @@
                         <img src="assets/belal-logo.png" alt="Belal Ezat Personal Portfolio" style="height: 200px; width: auto" class="w-auto" />
                     </a>
                     <p class="text-[var(--gray-text-color)] text-lg leading-relaxed mb-6 max-w-lg">
-                        Creating projects that resonate. A passionate developer crafting innovative solutions for the modern
-                        world.
+                        Creating projects that resonate. A passionate developer crafting innovative solutions for the modern world.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="w-12 h-12 bg-[var(--secondary-button-bg-color)] hover:bg-[var(--primary-color)] rounded-full flex items-center justify-center text-[var(--gray-text-color)] hover:text-[var(--primary-button-text-color)] transition-all duration-300 transform hover:scale-110">
@@ -502,189 +467,35 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">
-                        Navigation
-                    </h3>
+                    <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">Navigation</h3>
                     <ul class="space-y-4">
-                        <li>
-                            <a href="#hero" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-                                <i class="fas fa-home mr-3 w-4"></i>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-                                <i class="fas fa-folder mr-3 w-4"></i>
-                                Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#experience" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-                                <i class="fas fa-briefcase mr-3 w-4"></i>
-                                Experience
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#extracurriculars" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-                                <i class="fas fa-award mr-3 w-4"></i>
-                                Extracurriculars
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-                                <i class="fas fa-user mr-3 w-4"></i>
-                                Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-                                <i class="fas fa-envelope mr-3 w-4"></i>
-                                Contact
-                            </a>
-                        </li>
+                        <li><a href="#hero" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-home mr-3 w-4"></i>Home</a></li>
+                        <li><a href="#portfolio" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-folder mr-3 w-4"></i>Projects</a></li>
+                        <li><a href="#experience" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-briefcase mr-3 w-4"></i>Experience</a></li>
+                        <li><a href="#extracurriculars" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-award mr-3 w-4"></i>Extracurriculars</a></li>
+                        <li><a href="#about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-user mr-3 w-4"></i>Skills</a></li>
+                        <li><a href="#contact" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-envelope mr-3 w-4"></i>Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">
-                        Get in Touch
-                    </h3>
+                    <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">Get in Touch</h3>
                     <div class="space-y-4">
-                        <div class="flex items-center text-[var(--gray-text-color)]">
-                            <i class="fas fa-envelope text-[var(--primary-color)] mr-3 w-4"></i>
-                            <a href="mailto:belalezat05@gmail.com" class="hover:text-[var(--primary-color)] transition-colors duration-300">belalezat05@gmail.com</a>
-                        </div>
-                        <div class="flex items-center text-[var(--gray-text-color)]">
-                            <i class="fas fa-phone text-[var(--primary-color)] mr-3 w-4"></i>
-                            <span>(973) 862-1386</span>
-                        </div>
-                        <div class="flex items-center text-[var(--gray-text-color)]">
-                            <i class="fas fa-map-marker-alt text-[var(--primary-color)] mr-3 w-4"></i>
-                            <span>New York Metropolitan Area</span>
-                        </div>
+                        <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-envelope text-[var(--primary-color)] mr-3 w-4"></i><a href="mailto:belalezat05@gmail.com" class="hover:text-[var(--primary-color)] transition-colors duration-300">belalezat05@gmail.com</a></div>
+                        <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-phone text-[var(--primary-color)] mr-3 w-4"></i><span>(973) 862-1386</span></div>
+                        <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-map-marker-alt text-[var(--primary-color)] mr-3 w-4"></i><span>New York Metropolitan Area</span></div>
                     </div>
                 </div>
             </div>
             <div class="border-t border-[var(--dark-border-color)] pt-8">
                 <div class="flex justify-center items-center">
                     <div class="text-[var(--gray-text-color)] text-center">
-                        <p>
-                            &copy; 2025 Belal Ezat. All rights reserved. Designed with innovation
-                            and powered by creativity.
-                        </p>
+                        <p>&copy; 2026 Belal Ezat. All rights reserved. Designed with innovation and powered by creativity.</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div id="clinicsense-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-            <button data-modal-close="clinicsense-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-white mb-4">ClinicSense: AI-Powered Clinical Feedback Platform</h3>
-            <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">React</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Flask</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Celery</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Redis</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">AWS Bedrock</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Claude 3.5</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">AWS S3</span>
-                <span class="px-3 py-1" style="background-color: rgba(44, 98, 248, 0.1); color: #2c62f8; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">DynamoDB</span>
-            </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-3">
-                <li>Engineered a platform for medical students to upload clinical presentations and receive instant, rubric-based analysis, actionable recommendations, and an AI-generated exemplar version.</li>
-                <li>Architected a scalable, asynchronous backend with Flask, Celery, and Redis to manage a multimodal data processing pipeline (video, audio, text).</li>
-                <li>Integrated AWS Bedrock (Claude 3.5 Sonnet) for generative AI evaluation, AWS Transcribe for speech-to-text, and AWS Comprehend for clinical entity extraction.</li>
-                <li>Developed a React frontend for user interaction and data visualization, connected to a robust cloud infrastructure on AWS Amplify, S3, DynamoDB, and EC2.</li>
-            </ul>
-        </div>
-    </div>
-    <div id="rhel-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-            <button data-modal-close="rhel-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-white mb-4">RHEL 9.5 Server Deployment, Hardening, and Monitoring</h3>
-            <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Docker</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Wazuh</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VPN</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Sysmon</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">SNMP</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">VMWare</span>
-                <span class="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">Splunk</span>
-            </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-3">
-                <li>Designed and built a cross-platform home lab environment integrating RHEL, Fedora, and Windows systems, enabling real-world testing of security, monitoring, and VPN technologies.</li>
-                <li>Deployed Nextcloud in a Docker container on RHEL for private cloud storage, managing persistent volumes, container networking, and secure web access across the LAN.</li>
-                <li>Built a SIEM pipeline with Wazuh and Splunk, integrating syslog forwarding and custom alerts to monitor SSH and system events in real time.</li>
-                <li>Configured WireGuard VPN for secure remote access with port forwarding and set up SNMP-based monitoring with SIEM integration, enhancing visibility and centralized control over server activity.</li>
-            </ul>
-        </div>
-    </div>
-    <div id="profpickr-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-            <button data-modal-close="profpickr-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-white mb-4">ProfPickr Hackathon Project (GirlHacks 2025)</h3>
-            <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">React.js</span>
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">FastAPI</span>
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">MongoDB</span>
-                <span class="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs font-medium">Gemini API</span>
-            </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-3">
-                <li>Co-developed ProfPickr with a 4-person team, a platform that pulls NJIT course schedules with RateMyProfessor ratings for AI-powered professor recommendations.</li>
-                <li>Independently set up and managed MongoDB connections, ensuring reliable data storage and integration with backend APIs for scalable performance.</li>
-                <li>Led frontend development, designing and implementing React.js interfaces that let students search classes and view professor summaries.</li>
-                <li>Delivered a unified platform combining course schedules, professor ratings, and AI insights, reducing class selection time by about 15-20 minutes per student while improving decision-making.</li>
-            </ul>
-        </div>
-    </div>
-    <div id="inventory-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-            <button data-modal-close="inventory-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-white mb-4">Full-Stack Inventory Management Website</h3>
-            <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">PHP</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">MySQL</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">JavaScript</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">HTML/CSS</span>
-                <span class="px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-xs font-medium">AJAX</span>
-            </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-3">
-                <li>Architected MySQL databases for products and categories to optimize data integrity and retrieval efficiency.</li>
-                <li>Implemented secure, session-based PHP forms for authentication and CRUD operations, integrated with MySQL for persistent backend functionality.</li>
-                <li>Developed responsive front-end layout using HTML and CSS, with JavaScript to enable dynamic user interactions and real-time updates.</li>
-                <li>Strengthened application security by enforcing input validation and sanitation, effectively mitigating SQL injection and XSS threats.</li>
-            </ul>
-        </div>
-    </div>
-    <div id="portfolio-info-modal" class="modal-container fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-        <div class="modal-content bg-[var(--secondary-button-bg-color)] w-full max-w-2xl rounded-2xl border border-[var(--dark-border-color)] p-8 relative overflow-y-auto">
-            <button data-modal-close="portfolio-info-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-white mb-4">Personal Portfolio (You Are Here)</h3>
-            <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Tailwind CSS</span>
-                <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">JavaScript (ES6)</span>
-                <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Intersection Observer API</span>
-                <span class="px-3 py-1" style="background-color: rgba(255, 87, 34, 0.1); color: #ff5722; border-radius: 9999px; font-size: 0.75rem; font-weight: 500;">Mobile-First Design</span>
-            </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-3">
-                <li>Developed a fully responsive, single-page application (SPA) portfolio website using modular HTML/CSS/JS.</li>
-                <li>Utilized Tailwind CSS for component styling, ensuring rapid, theme-consistent front-end development.</li>
-                <li>Incorporated smooth scroll-triggered animations and a dynamic Equalizer visual using the Intersection Observer API for an engaging UX.</li>
-                <li>Applied advanced JavaScript for the continuous "Listening..." loop in the hero section, maintaining a strong music-streaming theme.</li>
-            </ul>
-        </div>
-    </div>
     <script src="scripts.js"></script>
 </body>
 </html>

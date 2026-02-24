@@ -26,10 +26,11 @@
   --secondary-button-hover-bg-color: #282828;
   --secondary-button-hover-text-color: #ffffff;
 }
+
 html {
   scroll-behavior: smooth;
 }
-/* THIS IS THE FIX: Prevents animations from creating horizontal overflow */
+
 body {
   margin: 0;
   padding: 0;
@@ -38,14 +39,13 @@ body {
   font-family: var(--font-family-body);
   overflow-x: hidden;
 }
+
 * {
   box-sizing: border-box;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
-}
-.modal-content {
-  max-height: 80vh;
 }
 
 /* --- Scroll Animation Styles --- */
@@ -125,9 +125,4 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.filter-btn.active {
-  background-color: var(--primary-color);
-  color: var(--primary-button-text-color);
-  border-color: var(--primary-color);
 }

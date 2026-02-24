@@ -42,36 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    // --- Project Modal Logic ---
-    document.querySelectorAll('[data-modal-target]').forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const modal = document.getElementById(trigger.getAttribute('data-modal-target'));
-            if (modal) {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-
-    document.querySelectorAll('[data-modal-close]').forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal-container');
-            if (modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-        });
-    });
-
-    document.querySelectorAll('.modal-container').forEach(overlay => {
-        overlay.addEventListener('click', (event) => {
-            if (event.target === overlay) {
-                overlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-        });
-    });
-
     // --- Scroll Animation Logic (Intersection Observer) ---
     const observerOptions = {
         root: null,
@@ -96,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // --- Dynamic Equalizer Animation Logic ---
-    const equalizerIds = ['live-equalizer-project', 'live-equalizer-exp', 'live-equalizer-umr'];
+    const equalizerIds = ['live-equalizer-project', 'live-equalizer-umr', 'live-equalizer-nicc'];
     const getRandomHeight = () => `${5 + Math.random() * 25}px`;
 
     function animateBar(bar) {
@@ -115,48 +85,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
-
-    // --- Project Filtering and Sorting Logic ---
-    const filterButtonsContainer = document.getElementById('filter-buttons');
-    const portfolioGrid = document.getElementById('portfolio-grid');
-
-    if (filterButtonsContainer && portfolioGrid) {
-        const projects = Array.from(portfolioGrid.querySelectorAll('.project-card'));
-
-        const sortByDate = () => {
-            const sortedProjects = [...projects].sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-            sortedProjects.forEach(project => portfolioGrid.appendChild(project));
-        };
-
-        const filterProjects = (category) => {
-            projects.forEach(project => {
-                const projectCategories = project.dataset.category ? project.dataset.category.split(' ') : [];
-                const isVisible = category === 'all' || projectCategories.includes(category);
-                project.classList.toggle('hidden', !isVisible);
-            });
-        };
-
-        filterButtonsContainer.addEventListener('click', (e) => {
-            const button = e.target.closest('button[data-filter]');
-            if (!button) return;
-
-            const filter = button.dataset.filter;
-            filterButtonsContainer.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            if (filter === 'most-recent') {
-                sortByDate();
-                projects.forEach(project => project.classList.remove('hidden'));
-            } else {
-                filterProjects(filter);
-            }
-        });
-        
-        // Initial setup on page load
-        const mostRecentBtn = filterButtonsContainer.querySelector('[data-filter="most-recent"]');
-        if (mostRecentBtn) {
-            mostRecentBtn.classList.add('active');
-        }
-        sortByDate();
-    }
 });
