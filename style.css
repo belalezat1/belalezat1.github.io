@@ -1,29 +1,29 @@
 :root {
-  --accent-color: #00d8a5;
+  --accent-color: #38bdf8;
   --accent2-color: #f2ea02;
-  --accent3-color: #e6248e;
+  --accent3-color: #818cf8;
   --accent4-color: #2c62f8;
   --accent5-color: #ff5722;
-  --primary-color: #1db954;
+  --primary-color: #3b82f6;
   --dark-text-color: #ffffff;
   --gray-text-color: #b3b3b3;
   --button-padding-x: 20px;
   --button-padding-y: 10px;
   --font-family-body: 'Nunito', sans-serif;
   --light-text-color: #000000;
-  --dark-border-color: #282828;
+  --dark-border-color: #1e3a5f;
   --light-border-color: #d9f8e7;
   --font-family-heading: 'Poppins', sans-serif;
   --button-rounded-radius: 50px;
-  --dark-background-color: #121212;
+  --dark-background-color: #0f1729;
   --light-background-color: #aaf0c8;
   --medium-background-color: #8ee6b5;
   --primary-button-text-color: #ffffff;
-  --secondary-button-bg-color: #181818;
+  --secondary-button-bg-color: #1a2332;
   --secondary-button-text-color: #ffffff;
-  --primary-button-hover-bg-color: #1ed760;
+  --primary-button-hover-bg-color: #2563eb;
   --primary-button-hover-text-color: #ffffff;
-  --secondary-button-hover-bg-color: #282828;
+  --secondary-button-hover-bg-color: #1e3a5f;
   --secondary-button-hover-text-color: #ffffff;
 }
 
@@ -68,61 +68,61 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(0) scale(1);
 }
 
-/* --- Hero Element Animations --- */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(-180deg); }
-}
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(90deg); }
-}
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-.animate-float-delayed {
-  animation: float-delayed 8s ease-in-out infinite;
-}
-.animate-float-slow {
-  animation: float-slow 10s ease-in-out infinite;
-}
-
-/* --- Equalizer Styles --- */
-.equalizer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-}
-.equalizer-label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.equalizer {
-  display: flex;
-  align-items: flex-end;
-  height: 30px;
-  width: 60px;
-  gap: 2px;
-  background-color: transparent;
-  border-radius: 2px;
-}
-.bar {
-  width: 4px;
-  background-color: var(--primary-color);
-  border-radius: 1px;
-  height: 5px;
-  transition: height 0.6s ease-in-out;
-}
-
-/* --- Helper Classes --- */
-.equalizer-title-flex {
+/* --- Status Dot (Pulsing) --- */
+.status-dot-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+.status-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translate(-50%, -50%);
+  animation: pulse-ring 2s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+  }
+}
+
+/* --- Blueprint Grid Background --- */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* --- Particle Canvas --- */
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }

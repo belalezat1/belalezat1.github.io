@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belal Ezat's Portfolio</title>
-    <link rel="icon" href="assets/belal-icon.png" type="image/png">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-50 backdrop-blur-lg bg-opacity-95 scroll-animate animate-visible" id="global-header">
+    <header class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-[100] backdrop-blur-lg bg-opacity-95 scroll-animate animate-visible" id="global-header">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
                     <a href="/" class="flex items-center">
-                        <img src="assets/belal-logo.png" alt="Belal Ezat Personal Portfolio" class="h-28 lg:h-36 w-auto" />
+                        <img src="assets/logo.png" alt="Belal Ezat Personal Portfolio" class="h-28 lg:h-36 w-auto" />
                     </a>
                 </div>
                 <nav class="hidden lg:flex items-center space-x-8">
@@ -28,7 +28,7 @@
                     <a href="#about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium">Skills</a>
                     <a href="#contact" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">Contact Me</a>
                     <div class="ml-4">
-                        <img class="h-12 w-12 rounded-full object-cover" src="assets/belalphoto.png" alt="Belal Ezat" />
+                        <img class="h-12 w-12 rounded-full object-cover object-[50%_30%]" src="assets/belal.JPG" alt="Belal Ezat" />
                     </div>
                 </nav>
                 <div class="lg:hidden">
@@ -49,24 +49,20 @@
         </div>
     </header>
 
-    <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden scroll-animate animate-visible" id="hero">
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-10 w-64 h-64 bg-[var(--primary-color)] rounded-full opacity-10 animate-float"></div>
-            <div class="absolute bottom-20 right-10 w-48 h-48 bg-[var(--accent-color)] rounded-full opacity-15 animate-float-delayed"></div>
-            <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-[var(--accent3-color)] rounded-full opacity-20 animate-float-slow"></div>
-        </div>
+    <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden scroll-animate animate-visible blueprint-grid" id="hero">
+        <canvas id="particle-canvas"></canvas>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-left">
                     <div class="inline-flex items-center px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] rounded-full text-[var(--dark-text-color)] text-sm font-medium mb-6">
-                        <i class="fas fa-music text-[var(--primary-color)] mr-2"></i>
-                        <span id="now-playing" class="transition-opacity duration-500">Listening... </span>
+                        <i class="fas fa-terminal text-[var(--primary-color)] mr-2"></i>
+                        <span id="now-playing" class="transition-opacity duration-500">Building... </span>
                     </div>
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-[var(--dark-text-color)] mb-2 leading-tight">Belal Ezat</h1>
                     <p class="text-xl sm:text-3xl lg:text-4xl font-bold mb-6">
-                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Aspiring Developer & Cloud Engineer</span>
+                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Software & Systems Engineer</span>
                     </p>
-                    <p class="text-lg sm:text-xl text-[var(--gray-text-color)] mb-8 leading-relaxed">I'm a passionate Computer Science student at NJIT, crafting innovative solutions for the modern world.</p>
+                    <p class="text-lg sm:text-xl text-[var(--gray-text-color)] mb-8 leading-relaxed">CS student at NJIT. I like building things that work, from snake bots to cloud infrastructure.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#portfolio" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center">
                             <i class="fas fa-folder-open mr-3"></i>
@@ -80,10 +76,8 @@
                 </div>
                 <div class="relative lg:ml-64 mt-8 lg:mt-0">
                     <div class="relative z-10">
-                        <img src="assets/belalphoto.png" alt="Belal Ezat Personal Portfolio" class="block mx-auto lg:mx-0 w-40 h-40 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl transform hover:scale-105 transition-transform duration-500" />
+                        <img src="assets/belal.JPG" alt="Belal Ezat Personal Portfolio" class="block mx-auto lg:mx-0 w-40 h-40 sm:w-80 sm:h-80 rounded-full object-cover object-[50%_30%] scale-110 shadow-2xl transform hover:scale-[1.15] transition-transform duration-500" />
                     </div>
-                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-[var(--primary-color)] rounded-full opacity-20 animate-float"></div>
-                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-[var(--accent-color)] rounded-full opacity-15 animate-float-delayed"></div>
                 </div>
             </div>
         </div>
@@ -92,7 +86,7 @@
         </div>
     </section>
 
-    <section class="code-section bg-[var(--dark-background-color)] py-20 relative scroll-animate slide-from-right" id="portfolio">
+    <section class="code-section bg-[var(--dark-background-color)] py-20 relative scroll-animate" id="portfolio">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 lg:mb-24">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6">
@@ -102,20 +96,46 @@
             </div>
 
             <div class="relative w-full max-w-6xl mx-auto pb-24">
-                
+
                 <div class="sticky z-10 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-90px)] lg:max-h-none top-[90px] lg:top-[100px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-16 shrink-0">
-                        <img src="assets/belal-logo.png" alt="Personal Portfolio Logo" class="w-full h-full object-contain drop-shadow-2xl" />
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
+                        <img src="assets/battlesnake.png" alt="Battlesnake 2026 Project" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
                     <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <div class="flex items-start sm:items-center justify-between mb-4 lg:mb-6">
-                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white">Dynamic Personal Portfolio</h3>
-                            <div class="equalizer-container ml-4 hidden sm:flex">
-                                <div class="equalizer" id="live-equalizer-project">
-                                    <div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div><div class="bar bar-4"></div><div class="bar bar-5"></div><div class="bar bar-6"></div><div class="bar bar-7"></div>
-                                </div>
-                            </div>
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">Battlesnake 2026 (NJIT Hackathon) | 2nd Place</h3>
+                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-6">
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">Python 3.12</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">Flask</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">Docker</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">BattleSnake API</span>
+                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">MCTS & A* Pathfinding</span>
                         </div>
+
+                        <div class="mb-6">
+                            <a href="https://github.com/belalezat1/battlesnake2026" target="_blank" class="inline-flex items-center px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[var(--dark-border-color)] rounded-lg text-[var(--gray-text-color)] hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
+                            <li>Built an AI-powered snake bot with Team Packet Sniffers that placed 2nd. It hunts food early, grows fast, then uses its size to eliminate opponents.</li>
+                            <li>Decision-making runs on a hybrid pipeline: 60% heuristic scoring + 40% Monte Carlo Tree Search with opponent prediction to pick the best move each turn.</li>
+                            <li>The snake uses A* pathfinding, flood fill for space control, Voronoi territory mapping, and kill-square detection to corner opponents in late-game scenarios.</li>
+                            <li>Runs as a Dockerized Flask server that responds to the BattleSnake API under a strict 500ms timeout per turn.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sticky z-20 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-100px)] lg:max-h-none top-[100px] lg:top-[120px]">
+                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-16 shrink-0">
+                        <img src="assets/logo.png" alt="Personal Portfolio Logo" class="w-full h-full object-contain drop-shadow-2xl" />
+                    </div>
+                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 status-dot-wrapper">
+                            <span>Dynamic Personal Portfolio</span>
+                            <div class="status-dot"></div>
+                        </h3>
                         <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Tailwind CSS</span>
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">JavaScript (ES6)</span>
@@ -123,20 +143,20 @@
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Mobile-First Design</span>
                         </div>
                         <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Developed a fully responsive, single-page application (SPA) portfolio website using modular HTML/CSS/JS.</li>
-                            <li>Utilized Tailwind CSS for component styling, ensuring rapid, theme-consistent front-end development.</li>
-                            <li>Incorporated smooth scroll-triggered animations and a dynamic Equalizer visual using the Intersection Observer API for an engaging UX.</li>
-                            <li>Applied advanced JavaScript for the continuous "Listening..." loop in the hero section, maintaining a strong music-streaming theme.</li>
+                            <li>The site you're looking at right now. A fully responsive single-page portfolio built from scratch with HTML, CSS, and JavaScript.</li>
+                            <li>Styled entirely with Tailwind CSS for fast, consistent theming across every section and breakpoint.</li>
+                            <li>Scroll-triggered animations and the equalizer visual are powered by the Intersection Observer API, no libraries needed.</li>
+                            <li>The "Listening..." ticker in the hero section cycles through skills using a custom JS interval loop, tying into the music-streaming aesthetic.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="sticky z-20 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-100px)] lg:max-h-none top-[100px] lg:top-[120px]">
+                <div class="sticky z-30 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-110px)] lg:max-h-none top-[110px] lg:top-[140px]">
                     <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
                         <img src="assets/clinicsense.jpeg" alt="ClinicSense Project Architecture" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
                     <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ClinicSense: AI-Powered Clinical Feedback</h3>
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ClinicSense: AI-Powered Clinical Feedback | 3rd Place</h3>
                         <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">React</span>
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Flask</span>
@@ -146,20 +166,20 @@
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">AWS S3 & DynamoDB</span>
                         </div>
                         <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Engineered a platform for medical students to upload clinical presentations and receive instant, rubric-based analysis, actionable recommendations, and an AI-generated exemplar version.</li>
-                            <li>Architected a scalable, asynchronous backend with Flask, Celery, and Redis to manage a multimodal data processing pipeline (video, audio, text).</li>
-                            <li>Integrated AWS Bedrock for generative AI evaluation, AWS Transcribe for speech-to-text, and AWS Comprehend for clinical entity extraction.</li>
-                            <li>Developed a React frontend for user interaction and data visualization, connected to a robust cloud infrastructure on AWS.</li>
+                            <li>Medical students upload clinical presentations and get instant AI-generated feedback: rubric scores, actionable tips, and an exemplar version of their work.</li>
+                            <li>Backend runs on Flask + Celery + Redis, processing video, audio, and text asynchronously so nothing blocks the user.</li>
+                            <li>Uses AWS Bedrock (Claude 3.5) for evaluation, Transcribe for speech-to-text, and Comprehend for pulling out clinical entities automatically.</li>
+                            <li>React frontend handles uploads, displays results, and connects to S3 and DynamoDB on the backend. Won 3rd place at RU Health Hacks (AWS MedEd Track).</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="sticky z-30 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-110px)] lg:max-h-none top-[110px] lg:top-[140px]">
+                <div class="sticky z-40 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-120px)] lg:max-h-none top-[120px] lg:top-[160px]">
                     <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
                         <img src="assets/profpickr.png" alt="ProfPickr Project" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
                     <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ProfPickr (GirlHacks 2025)</h3>
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ProfPickr</h3>
                         <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">React.js</span>
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">FastAPI</span>
@@ -167,15 +187,15 @@
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">Gemini API</span>
                         </div>
                         <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Co-developed ProfPickr with a 4-person team, a platform that pulls NJIT course schedules with RateMyProfessor ratings for AI-powered professor recommendations.</li>
-                            <li>Independently set up and managed MongoDB connections, ensuring reliable data storage and integration with backend APIs for scalable performance.</li>
-                            <li>Led frontend development, designing and implementing React.js interfaces that let students search classes and view professor summaries.</li>
-                            <li>Delivered a unified platform combining data sets, reducing class selection time by about 15-20 minutes per student while improving decision-making.</li>
+                            <li>Built with a 4-person team. ProfPickr pulls NJIT course schedules alongside RateMyProfessor ratings so students can pick classes and professors in one place.</li>
+                            <li>Set up the MongoDB layer end-to-end: schema design, connection handling, and integration with the FastAPI backend.</li>
+                            <li>Led the React.js frontend: search, filtering, and professor summary views that make the data actually usable.</li>
+                            <li>Cuts class selection time by ~15-20 minutes per student by combining multiple data sources into a single search.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="sticky z-40 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-120px)] lg:max-h-none top-[120px] lg:top-[160px]">
+                <div class="sticky z-50 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-130px)] lg:max-h-none top-[130px] lg:top-[180px]">
                     <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
                         <img src="assets/rhel.png" alt="Server Infrastructure" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
@@ -197,15 +217,15 @@
                         </div>
 
                         <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Designed and built a cross-platform home lab environment integrating RHEL, Fedora, and Windows systems, enabling real-world testing of security, monitoring, and VPN technologies.</li>
-                            <li>Deployed Nextcloud in a Docker container on RHEL for private cloud storage, managing persistent volumes, container networking, and secure web access across the LAN.</li>
-                            <li>Built a SIEM pipeline with Wazuh and Splunk, integrating syslog forwarding and custom alerts to monitor SSH and system events in real time.</li>
-                            <li>Configured WireGuard VPN for secure remote access with port forwarding and set up SNMP-based monitoring.</li>
+                            <li>Home lab running RHEL, Fedora, and Windows VMs. Used as a sandbox for testing security tooling, networking, and monitoring in a real multi-OS environment.</li>
+                            <li>Self-hosted Nextcloud via Docker on RHEL with persistent volumes, container networking, and LAN-wide secure access for private cloud storage.</li>
+                            <li>Wazuh + Splunk SIEM pipeline with syslog forwarding and custom alert rules that catch SSH anomalies and system events in real time.</li>
+                            <li>WireGuard VPN for remote access with port forwarding, plus SNMP monitoring across all hosts.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="sticky z-50 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-130px)] lg:max-h-none top-[130px] lg:top-[180px]">
+                <div class="sticky z-[60] w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-140px)] lg:max-h-none top-[140px] lg:top-[200px]">
                     <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
                         <img src="assets/sportshop.png" alt="Board Sports Apparel Shop Inventory" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
                     </div>
@@ -218,10 +238,10 @@
                             <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">HTML/CSS</span>
                         </div>
                         <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Architected MySQL databases for products and categories to optimize data integrity and retrieval efficiency.</li>
-                            <li>Implemented secure, session-based PHP forms for authentication and CRUD operations, integrated with MySQL for persistent backend functionality.</li>
-                            <li>Developed responsive front-end layout using HTML and CSS, with JavaScript to enable dynamic user interactions and real-time updates.</li>
-                            <li>Strengthened application security by enforcing input validation and sanitation, effectively mitigating SQL injection and XSS threats.</li>
+                            <li>Full CRUD inventory system with products, categories, search, and filtering backed by a normalized MySQL database.</li>
+                            <li>PHP handles auth (session-based login) and all form processing, with parameterized queries to prevent SQL injection.</li>
+                            <li>Frontend uses vanilla HTML/CSS/JS with AJAX calls so updates happen without full page reloads.</li>
+                            <li>Input validation and output sanitization on both client and server side to block XSS and injection attacks.</li>
                         </ul>
                     </div>
                 </div>
@@ -239,11 +259,14 @@
             </div>
             <div class="max-w-3xl mx-auto">
                 <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-white">IT Specialist</h3>
-                    <p class="text-lg text-[var(--primary-color)] font-semibold">Best Bet Computer</p>
-                    <p class="text-md text-gray-400 mb-4">Sep 2025 - Dec 2025 | Union, NJ</p>
+                    <h3 class="text-2xl font-bold text-white status-dot-wrapper">
+                        <span>Systems Engineer Intern</span>
+                        <div class="status-dot"></div>
+                    </h3>
+                    <p class="text-lg text-[var(--primary-color)] font-semibold">Thorlabs</p>
+                    <p class="text-md text-gray-400 mb-4">May 2026 – Aug 2026</p>
                     <p class="text-gray-300">
-                        Provided comprehensive IT support by deploying and configuring hardware at client sites, managing multiple client websites to improve performance and uptime, and remotely resolving complex software issues to significantly reduce system downtime.
+                        Focused on migrating legacy infrastructure to modern platforms, creating automated deployment pipelines, updating system configurations for improved reliability, and upgrading hardware and software across enterprise environments.
                     </p>
                 </div>
                 <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)] mt-8">
@@ -252,6 +275,14 @@
                     <p class="text-md text-gray-400 mb-4">Nov 2025 – Feb 2026 | East Orange, NJ</p>
                     <p class="text-gray-300">
                         Managed regulatory compliance and digital recordkeeping for Section 8/HUD and LIHTC properties, generated monthly MUI reports and maintained tenant ledgers while collaborating with bookkeeping for financial accuracy, and oversaw capital projects and maintenance workflows including utility access and violation remediation.
+                    </p>
+                </div>
+                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)] mt-8">
+                    <h3 class="text-2xl font-bold text-white">IT Specialist</h3>
+                    <p class="text-lg text-[var(--primary-color)] font-semibold">Best Bet Computer</p>
+                    <p class="text-md text-gray-400 mb-4">Sep 2025 - Dec 2025 | Union, NJ</p>
+                    <p class="text-gray-300">
+                        Provided comprehensive IT support by deploying and configuring hardware at client sites, managing multiple client websites to improve performance and uptime, and remotely resolving complex software issues to significantly reduce system downtime.
                     </p>
                 </div>
             </div>
@@ -267,11 +298,9 @@
             </div>
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 md:items-start">
                 <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-white equalizer-title-flex">
+                    <h3 class="text-2xl font-bold text-white status-dot-wrapper">
                         <span>Treasurer</span>
-                        <div class="equalizer" id="live-equalizer-umr">
-                            <div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div><div class="bar bar-4"></div><div class="bar bar-5"></div><div class="bar bar-6"></div><div class="bar bar-7"></div>
-                        </div>
+                        <div class="status-dot"></div>
                     </h3>
                     <p class="text-lg text-[var(--primary-color)] font-semibold">United Mission Relief (UMR) at NJIT</p>
                     <p class="text-md text-gray-400 mb-4">Sep 2025 - Present</p>
@@ -279,11 +308,9 @@
                         Managed the club’s finances by developing and overseeing budgets, coordinating cost-effective events, and maintaining accurate financial records for the executive board.
                     </p>
                     <hr class="border-[var(--dark-border-color)] my-6" />
-                    <h3 class="text-2xl font-bold text-white equalizer-title-flex mt-6">
+                    <h3 class="text-2xl font-bold text-white status-dot-wrapper mt-6">
                         <span>Senior Hacker</span>
-                        <div class="equalizer" id="live-equalizer-nicc">
-                            <div class="bar bar-1"></div><div class="bar bar-2"></div><div class="bar bar-3"></div><div class="bar bar-4"></div><div class="bar bar-5"></div><div class="bar bar-6"></div><div class="bar bar-7"></div>
-                        </div>
+                        <div class="status-dot"></div>
                     </h3>
                     <p class="text-lg text-[var(--primary-color)] font-semibold">NJIT Information & Cybersecurity Club (NICC)</p>
                     <p class="text-md text-gray-400 mb-4">Sep 2025 – Present</p>
@@ -306,7 +333,7 @@
                             <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Hackathons</h4>
                             <ul class="list-none text-gray-300 space-y-4">
                                 <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">RU Health Hacks</p><p class="text-sm text-gray-400">3rd Place (AWS MedEd Track)</p></div></li>
-                                <li class="flex items-start"><i class="fas fa-laptop-code text-green-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">GirlHacks 2025</p><p class="text-sm text-gray-400">Participant</p></div></li>
+                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">Battlesnake 2026 (NJIT)</p><p class="text-sm text-gray-400">2nd Place | Team Packet Sniffers</p></div></li>
                             </ul>
                         </div>
                         <hr class="border-[var(--dark-border-color)]">
@@ -378,6 +405,7 @@
                             <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Linux</span>
                             <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Git</span>
                             <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Wazuh</span>
+                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Tailwind CSS</span>
                         </div>
                     </div>
                 </div>
@@ -386,24 +414,19 @@
     </section>
 
     <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden scroll-animate slide-from-right" id="contact">
-        <div class="absolute inset-0">
-            <div class="absolute top-20 left-20 w-64 h-64 bg-[var(--primary-color)] rounded-full opacity-5 animate-float"></div>
-            <div class="absolute bottom-20 right-20 w-48 h-48 bg-[var(--accent-color)] rounded-full opacity-10 animate-float-delayed"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent3-color)] rounded-full opacity-5"></div>
-        </div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="mb-12">
                     <div class="inline-flex items-center px-6 py-3 bg-[var(--primary-color)] bg-opacity-20 rounded-full text-[var(--dark-text-color)] font-semibold mb-6 backdrop-blur-sm">
-                        <i class="fas fa-headphones mr-3"></i>
-                        Ready to Collaborate?
+                        <i class="fas fa-tools mr-3"></i>
+                        Ready to Build?
                     </div>
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight">
-                        Let's Create Something
-                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Amazing Together</span>
+                        Let's Build Something
+                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Cool Together</span>
                     </h2>
                     <p class="text-lg sm:text-xl text-[var(--gray-text-color)] leading-relaxed">
-                        Whether you are a student, recruiter or fellow developer, feel free to reach out for collaborations, project inquiries, or just to connect!
+                        Got a project idea, a question, or just want to talk tech? I'm always down to chat.
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -449,7 +472,7 @@
                     <blockquote class="text-xl sm:text-2xl font-semibold mb-4 leading-relaxed">
                         "One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man."
                     </blockquote>
-                    <div class="text-lg opacity-90">— Elbert Hubbard</div>
+                    <div class="text-lg opacity-90">- Elbert Hubbard</div>
                 </div>
             </div>
         </div>
@@ -460,10 +483,10 @@
             <div class="grid lg:grid-cols-4 gap-12 mb-12">
                 <div class="lg:col-span-2">
                     <a href="/" class="inline-block mb-6">
-                        <img src="assets/belal-logo.png" alt="Belal Ezat Personal Portfolio" style="height: 200px; width: auto" class="w-auto" />
+                        <img src="assets/logo.png" alt="Belal Ezat Personal Portfolio" style="height: 200px; width: auto" class="w-auto" />
                     </a>
                     <p class="text-[var(--gray-text-color)] text-lg leading-relaxed mb-6 max-w-lg">
-                        Creating projects that resonate. A passionate developer crafting innovative solutions for the modern world.
+                        When I'm not writing code, you'll find me on the golf course, out kayaking, or up on the mountain snowboarding.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="w-12 h-12 bg-[var(--secondary-button-bg-color)] hover:bg-[var(--primary-color)] rounded-full flex items-center justify-center text-[var(--gray-text-color)] hover:text-[var(--primary-button-text-color)] transition-all duration-300 transform hover:scale-110">
@@ -489,7 +512,6 @@
                     <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">Get in Touch</h3>
                     <div class="space-y-4">
                         <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-envelope text-[var(--primary-color)] mr-3 w-4"></i><a href="mailto:belalezat05@gmail.com" class="hover:text-[var(--primary-color)] transition-colors duration-300">belalezat05@gmail.com</a></div>
-                        <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-phone text-[var(--primary-color)] mr-3 w-4"></i><span>(973) 862-1386</span></div>
                         <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-map-marker-alt text-[var(--primary-color)] mr-3 w-4"></i><span>New York Metropolitan Area</span></div>
                     </div>
                 </div>
@@ -497,7 +519,7 @@
             <div class="border-t border-[var(--dark-border-color)] pt-8">
                 <div class="flex justify-center items-center">
                     <div class="text-[var(--gray-text-color)] text-center">
-                        <p>&copy; 2026 Belal Ezat. All rights reserved. Designed with innovation and powered by creativity.</p>
+                        <p>&copy; 2026 Belal Ezat. All rights reserved.</p>
                     </div>
                 </div>
             </div>
