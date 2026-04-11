@@ -1,30 +1,17 @@
 :root {
-  --accent-color: #38bdf8;
-  --accent2-color: #f2ea02;
-  --accent3-color: #818cf8;
-  --accent4-color: #2c62f8;
-  --accent5-color: #ff5722;
-  --primary-color: #3b82f6;
-  --dark-text-color: #ffffff;
-  --gray-text-color: #b3b3b3;
-  --button-padding-x: 20px;
-  --button-padding-y: 10px;
-  --font-family-body: 'Nunito', sans-serif;
-  --light-text-color: #000000;
-  --dark-border-color: #1e3a5f;
-  --light-border-color: #d9f8e7;
-  --font-family-heading: 'Poppins', sans-serif;
-  --button-rounded-radius: 50px;
-  --dark-background-color: #0f1729;
-  --light-background-color: #aaf0c8;
-  --medium-background-color: #8ee6b5;
-  --primary-button-text-color: #ffffff;
-  --secondary-button-bg-color: #1a2332;
-  --secondary-button-text-color: #ffffff;
-  --primary-button-hover-bg-color: #2563eb;
-  --primary-button-hover-text-color: #ffffff;
-  --secondary-button-hover-bg-color: #1e3a5f;
-  --secondary-button-hover-text-color: #ffffff;
+  --primary-color: #C5A059;
+  --primary-light: #E9C176;
+  --dark-background-color: #0A0A0A;
+  --surface-low: #0E0E0E;
+  --surface-container: #131313;
+  --surface-container-high: #1C1C1C;
+  --surface-container-highest: #252525;
+  --dark-text-color: #E5E4E2;
+  --gray-text-color: #9A8F80;
+  --dark-border-color: #2A2A2A;
+  --secondary-button-bg-color: #131313;
+  --font-family-body: 'Manrope', sans-serif;
+  --font-family-heading: 'Noto Serif', serif;
 }
 
 html {
@@ -34,9 +21,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  border: none;
   background-color: var(--dark-background-color);
   font-family: var(--font-family-body);
+  color: var(--dark-text-color);
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
@@ -48,7 +36,40 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
 }
 
-/* --- Scroll Animation Styles --- */
+/* --- Gold Metallic Gradient --- */
+.gold-metallic {
+  background: linear-gradient(135deg, #C5A059 0%, #E9C176 50%, #C5A059 100%);
+}
+
+/* --- Glass Nav --- */
+.glass-nav {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* --- Hover Lift --- */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* --- Reveal on Scroll --- */
+.reveal-on-scroll {
+  opacity: 0;
+}
+.reveal-on-scroll.active {
+  animation: fade-in-up 1.2s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Header Scroll Animate --- */
 .scroll-animate {
   opacity: 0;
   transform: translateY(40px) scale(0.98);
@@ -58,62 +79,33 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.scroll-animate.slide-from-right {
-  opacity: 0;
-  transform: translateX(50px) scale(0.98);
-  transition: opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.scroll-animate.slide-from-right.animate-visible {
-  opacity: 1;
-  transform: translateX(0) scale(1);
-}
 
-/* --- Status Dot (Pulsing) --- */
-.status-dot-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* --- Status Dot (pulsing gold) --- */
 .status-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: var(--primary-color);
   border-radius: 50%;
   position: relative;
+  display: inline-block;
   flex-shrink: 0;
-  margin-left: 12px;
 }
 .status-dot::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: var(--primary-color);
   transform: translate(-50%, -50%);
   animation: pulse-ring 2s ease-out infinite;
 }
-@keyframes pulse-ring {
-  0% {
-    width: 10px;
-    height: 10px;
-    opacity: 0.6;
-  }
-  100% {
-    width: 30px;
-    height: 30px;
-    opacity: 0;
-  }
-}
 
-/* --- Blueprint Grid Background --- */
-.blueprint-grid {
-  background-image:
-    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
+@keyframes pulse-ring {
+  0%  { width: 8px;  height: 8px;  opacity: 0.6; }
+  100%{ width: 24px; height: 24px; opacity: 0;   }
 }
 
 /* --- Particle Canvas --- */
@@ -125,4 +117,49 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   pointer-events: none;
   z-index: 1;
+}
+
+/* --- Progress Bar --- */
+.progress-fill {
+  transition: width 1.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* --- Scroll margin so fixed header doesn't cover sections --- */
+#portfolio, #experience, #extracurriculars, #about, #contact {
+  scroll-margin-top: 72px;
+}
+
+/* --- Grain texture on hero --- */
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+/* --- Skills marquee strip --- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Active nav link --- */
+nav a.nav-active {
+  color: #C5A059;
+  border-bottom: 1px solid #C5A059;
+  padding-bottom: 2px;
 }

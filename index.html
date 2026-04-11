@@ -3,529 +3,608 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Belal Ezat's Portfolio</title>
+    <title>Belal Ezat | Software &amp; Systems Engineer</title>
+    <meta name="description" content="Belal Ezat, CS student at NJIT. Software & Systems Engineer building backend systems, cloud infrastructure, and security tooling." />
+    <meta property="og:title" content="Belal Ezat | Software & Systems Engineer" />
+    <meta property="og:description" content="CS student at NJIT. I like building things that work, from snake bots to cloud infrastructure." />
+    <meta property="og:image" content="assets/belal.JPG" />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="tailwind.css">
     <script src="https://kit.fontawesome.com/8e98006f77.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="code-section bg-[var(--dark-background-color)] border-b border-[var(--dark-border-color)] sticky top-0 z-[100] backdrop-blur-lg bg-opacity-95 scroll-animate animate-visible" id="global-header">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                    <a href="/" class="flex items-center">
-                        <img src="assets/logo.png" alt="Belal Ezat Personal Portfolio" class="h-28 lg:h-36 w-auto" />
+<body class="bg-[#0A0A0A] text-[#E5E4E2] selection:bg-[#C5A059] selection:text-black">
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed top-0 w-full z-[100] glass-nav border-b border-[#C5A059]/10 scroll-animate animate-visible" id="global-header">
+    <div class="flex justify-between items-center px-6 lg:px-16 py-4 max-w-full mx-auto">
+        <a href="#hero">
+            <img src="assets/logo.png" alt="Belal Ezat" class="h-9 w-auto" />
+        </a>
+        <nav class="hidden lg:flex gap-10 items-center">
+            <a href="#experience" class="text-[#9A8F80] hover:text-[#C5A059] font-['Manrope'] uppercase tracking-[2px] text-xs transition-colors duration-300">Experience</a>
+            <a href="#portfolio" class="text-[#9A8F80] hover:text-[#C5A059] font-['Manrope'] uppercase tracking-[2px] text-xs transition-colors duration-300">Portfolio</a>
+            <a href="#extracurriculars" class="text-[#9A8F80] hover:text-[#C5A059] font-['Manrope'] uppercase tracking-[2px] text-xs transition-colors duration-300">Awards</a>
+            <a href="#about" class="text-[#9A8F80] hover:text-[#C5A059] font-['Manrope'] uppercase tracking-[2px] text-xs transition-colors duration-300">Skills</a>
+            <a href="#contact" class="gold-metallic text-black px-7 py-2.5 rounded-sm font-['Manrope'] font-bold uppercase tracking-widest text-[10px] hover:brightness-110 transition-all duration-300">Contact</a>
+        </nav>
+        <button class="lg:hidden text-[#C5A059]" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="hidden lg:hidden border-t border-[#2A2A2A] bg-[#0A0A0A]" id="mobile-menu">
+        <div class="flex flex-col px-6 py-4 gap-4">
+            <a href="#experience" class="text-[#9A8F80] font-['Manrope'] uppercase tracking-[2px] text-xs py-2">Experience</a>
+            <a href="#portfolio" class="text-[#9A8F80] font-['Manrope'] uppercase tracking-[2px] text-xs py-2">Portfolio</a>
+            <a href="#extracurriculars" class="text-[#9A8F80] font-['Manrope'] uppercase tracking-[2px] text-xs py-2">Awards</a>
+            <a href="#about" class="text-[#9A8F80] font-['Manrope'] uppercase tracking-[2px] text-xs py-2">Skills</a>
+            <a href="#contact" class="gold-metallic text-black text-center px-7 py-3 rounded-sm font-['Manrope'] font-bold uppercase tracking-widest text-[10px] mt-2">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main>
+<!-- ===================== HERO ===================== -->
+<section class="min-h-screen flex items-center px-6 lg:px-24 pt-20 relative overflow-hidden bg-[#0A0A0A]" id="hero">
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Decorative concentric rings -->
+    <div class="absolute right-[-15%] top-1/4 -z-10 opacity-10 hidden lg:block pointer-events-none">
+        <div class="w-[700px] h-[700px] rounded-full border-[0.5px] border-[#C5A059]/40 flex items-center justify-center">
+            <div class="w-[500px] h-[500px] rounded-full border-[0.5px] border-[#C5A059]/25 flex items-center justify-center">
+                <div class="w-[300px] h-[300px] rounded-full border-[0.5px] border-[#C5A059]/15"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text -->
+        <div>
+            <div class="inline-flex items-center px-4 py-2 border border-[#C5A059]/20 bg-[#C5A059]/5 rounded-sm text-[#9A8F80] text-[11px] font-['Manrope'] mb-8 tracking-widest uppercase transition-opacity duration-500">
+                <i class="fas fa-terminal text-[#C5A059] mr-3 text-xs"></i>
+                <span id="now-playing">Building...</span>
+            </div>
+
+            <h1 class="font-['Noto_Serif'] text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] text-[#E5E4E2] mb-5">
+                Belal<br/>Ezat
+            </h1>
+
+            <p class="font-['Noto_Serif'] text-2xl md:text-3xl lg:text-4xl font-bold italic text-[#C5A059] mb-8">
+                Software &amp; Systems Engineer
+            </p>
+
+            <p class="font-['Manrope'] text-lg text-[#9A8F80] mb-10 max-w-lg font-light leading-relaxed">
+                CS student at NJIT. I like building things that work, from snake bots to cloud infrastructure.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#portfolio" class="gold-metallic text-black px-8 py-4 rounded-sm font-['Manrope'] font-bold uppercase tracking-widest text-[10px] hover:brightness-110 transition-all duration-300 flex items-center justify-center gap-3 active:scale-[0.98]">
+                    <i class="fas fa-folder-open"></i> View My Work
+                </a>
+                <a href="#contact" class="border border-[#C5A059]/40 text-[#C5A059] hover:border-[#C5A059] hover:bg-[#C5A059]/5 px-8 py-4 rounded-sm font-['Manrope'] font-bold uppercase tracking-widest text-[10px] transition-all duration-300 flex items-center justify-center gap-3">
+                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+            </div>
+        </div>
+
+        <!-- Photo -->
+        <div class="flex justify-center lg:justify-end">
+            <div class="relative">
+                <img src="assets/belal.JPG" alt="Belal Ezat"
+                    class="w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[480px] object-cover object-[50%_30%] rounded-sm border border-[#C5A059]/20 shadow-2xl" />
+                <div class="absolute inset-0 rounded-sm bg-gradient-to-t from-[#0A0A0A]/30 to-transparent pointer-events-none"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== MARQUEE STRIP ===================== -->
+<div class="overflow-hidden border-y border-[#2A2A2A] bg-[#0E0E0E] py-4" aria-hidden="true">
+    <div class="marquee-track">
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Python</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Flask</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">React.js</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">AWS</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Docker</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Linux</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">TypeScript</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Wazuh</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">MongoDB</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">FastAPI</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Splunk</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Redis</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Node.js</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">MySQL</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">WireGuard</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Git</span>
+        <!-- duplicate for seamless loop -->
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Python</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Flask</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">React.js</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">AWS</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Docker</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Linux</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">TypeScript</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Wazuh</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">MongoDB</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">FastAPI</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Splunk</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Redis</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">Node.js</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">MySQL</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#9A8F80] px-8">WireGuard</span>
+        <span class="font-['Manrope'] text-[10px] uppercase tracking-[0.3em] text-[#C5A059] px-8">Git</span>
+    </div>
+</div>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section class="py-32 px-6 lg:px-16 bg-[#0A0A0A]" id="portfolio">
+    <div class="max-w-7xl mx-auto">
+        <div class="reveal-on-scroll flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
+            <h2 class="font-['Noto_Serif'] text-5xl md:text-7xl font-bold tracking-tighter">Featured<br/>Projects</h2>
+            <div class="flex items-center gap-4">
+                <div class="h-px w-12 bg-[#C5A059]/30"></div>
+                <p class="font-['Manrope'] text-[#9A8F80] tracking-[0.3em] uppercase text-[10px]">Select Repository [06]</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+
+            <!-- 01 Battlesnake — 8 cols, hero card -->
+            <article class="md:col-span-8 group relative rounded-sm overflow-hidden hover-lift border border-[#2A2A2A] hover:border-[#C5A059]/30 transition-colors duration-500 h-[480px] md:h-[580px] reveal-on-scroll">
+                <img src="assets/battlesnake.png" alt="Battlesnake 2026" loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover object-top project-img scale-105 group-hover:scale-100 transition-transform duration-1000 bg-[#131313]" />
+                <!-- vignette -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/55 to-black/10 z-10 pointer-events-none"></div>
+                <!-- card number -->
+                <span class="absolute top-5 right-6 z-20 font-['Manrope'] text-[9px] text-[#C5A059]/60 tracking-[0.4em] font-bold select-none">01</span>
+                <!-- text area — frosted blur at bottom -->
+                <div class="absolute bottom-0 left-0 right-0 z-20 px-8 lg:px-12 pb-8 lg:pb-10 pt-28 backdrop-blur-[2px]">
+                    <div class="border-t border-[#C5A059]/15 mb-4"></div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Python</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Flask</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">MCTS</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Docker</span>
+                    </div>
+                    <h3 class="font-['Noto_Serif'] text-3xl lg:text-4xl font-bold text-[#E5E4E2] mb-3 group-hover:text-[#C5A059] transition-colors duration-300">Battlesnake 2026: 2nd Place</h3>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-sm max-w-xl mb-5 leading-relaxed">Built for the NJIT Battlesnake Hackathon with Team Packet Sniffers. A* pathfinding, flood fill, Voronoi mapping, and Monte Carlo Tree Search under a 500ms per-turn deadline.</p>
+                    <a href="https://github.com/belalezat1/battlesnake2026" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 font-['Manrope'] text-[#E5E4E2] text-[10px] uppercase tracking-[0.3em] group/cta w-fit">
+                        <span class="pb-0.5 border-b border-[#E5E4E2]/30 group-hover/cta:border-[#C5A059] group-hover/cta:text-[#C5A059] transition-colors">View on GitHub</span>
+                        <i class="fas fa-arrow-right text-[#C5A059] group-hover/cta:translate-x-1 transition-transform text-xs"></i>
                     </a>
                 </div>
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#experience" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium">Experience</a>
-                    <a href="#portfolio" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium">Portfolio</a>
-                    <a href="#extracurriculars" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium">Extracurriculars</a>
-                    <a href="#about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium">Skills</a>
-                    <a href="#contact" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">Contact Me</a>
-                    <div class="ml-4">
-                        <img class="h-12 w-12 rounded-full object-cover object-[50%_30%]" src="assets/belal.JPG" alt="Belal Ezat" />
+            </article>
+
+            <!-- 02 Personal Portfolio — 4 cols -->
+            <article class="md:col-span-4 group relative rounded-sm overflow-hidden hover-lift border border-[#2A2A2A] hover:border-[#C5A059]/30 transition-colors duration-500 h-[480px] md:h-[580px] bg-[#0A0A0A] flex flex-col reveal-on-scroll">
+                <!-- top: logo area -->
+                <div class="relative flex-1 overflow-hidden flex items-center justify-center p-10 bg-[#0A0A0A]">
+                    <!-- dot grid texture -->
+                    <div class="absolute inset-0 opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(circle, #C5A059 1px, transparent 1px); background-size: 28px 28px;"></div>
+                    <!-- radial glow behind logo -->
+                    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(197,160,89,0.07) 0%, transparent 70%);"></div>
+                    <img src="assets/logo.png" alt="Personal Portfolio" loading="lazy"
+                        class="relative z-10 w-40 h-40 object-contain opacity-60 group-hover:opacity-90 scale-100 group-hover:scale-110 transition-all duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0A]/80 pointer-events-none"></div>
+                </div>
+                <!-- bottom: text with consistent treatment -->
+                <div class="relative z-10 px-8 pb-8 pt-6 border-t border-[#2A2A2A]">
+                    <span class="absolute top-4 right-6 font-['Manrope'] text-[9px] text-[#C5A059]/60 tracking-[0.4em] font-bold select-none">02</span>
+                    <div class="flex flex-wrap gap-1.5 mb-3">
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Tailwind</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Vanilla JS</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">HTML / CSS</span>
                     </div>
-                </nav>
-                <div class="lg:hidden">
-                    <button id="mobile-menu-toggle" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] p-2">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                    <h3 class="font-['Noto_Serif'] text-2xl font-bold text-[#E5E4E2] mb-3 group-hover:text-[#C5A059] transition-colors duration-300">This Site</h3>
+                    <p class="font-['Manrope'] text-sm text-[#9A8F80] leading-relaxed">Particle network, scroll animations, and a gold-black minimalist design built from scratch with no framework.</p>
                 </div>
-            </div>
-            <nav id="mobile-menu" class="hidden lg:hidden bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="#experience" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2">Experience</a>
-                    <a href="#portfolio" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2">Portfolio</a>
-                    <a href="#extracurriculars" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2">Extracurriculars</a>
-                    <a href="#about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 font-medium px-4 py-2">Skills</a>
-                    <a href="#contact" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-full font-semibold transition-all duration-300 mx-4 text-center">Contact Me</a>
+            </article>
+
+            <!-- 03 ClinicSense — 6 cols -->
+            <article class="md:col-span-6 group relative rounded-sm overflow-hidden hover-lift border border-[#2A2A2A] hover:border-[#8B6A2E]/40 transition-colors duration-500 h-[420px] reveal-on-scroll">
+                <img src="assets/clinicsense.jpeg" alt="ClinicSense" loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover project-img scale-105 group-hover:scale-100 blur-[2px] transition-transform duration-1000 bg-[#f5f5f5]" />
+                <span class="absolute top-5 right-6 z-20 font-['Manrope'] text-[9px] text-[#111]/40 tracking-[0.4em] font-bold select-none">03</span>
+                <div class="absolute bottom-0 left-0 right-0 z-20 px-8 lg:px-10 pb-8 lg:pb-9 pt-24">
+                    <div class="border-t border-[#111]/15 mb-4"></div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">React</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Flask</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Celery</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Redis</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">AWS Bedrock</span>
+                    </div>
+                    <h3 class="font-['Noto_Serif'] text-2xl lg:text-3xl font-bold text-[#111] mb-3 group-hover:text-[#8B6A2E] transition-colors duration-300">ClinicSense: 3rd Place</h3>
+                    <p class="font-['Manrope'] text-sm text-[#333] leading-relaxed max-w-lg mb-5">Instant AI feedback on clinical presentations: rubric scores, tips, and an exemplar response. Async pipeline with Celery, Redis, and AWS Bedrock — 3rd at RU Health Hacks.</p>
+                    <span class="inline-flex items-center gap-2 font-['Manrope'] text-[#111]/30 text-[10px] uppercase tracking-[0.3em] cursor-default select-none">
+                        <i class="fas fa-lock text-[9px]"></i>Private Repository
+                    </span>
                 </div>
-            </nav>
+            </article>
+
+            <!-- 04 ProfPickr — 6 cols -->
+            <article class="md:col-span-6 group relative rounded-sm overflow-hidden hover-lift border border-[#2A2A2A] hover:border-[#8B6A2E]/40 transition-colors duration-500 h-[420px] reveal-on-scroll">
+                <img src="assets/profpickr.png" alt="ProfPickr" loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover object-top project-img scale-105 group-hover:scale-100 blur-[2px] transition-transform duration-1000 bg-[#f5f0e8]" />
+                <span class="absolute top-5 right-6 z-20 font-['Manrope'] text-[9px] text-[#111]/40 tracking-[0.4em] font-bold select-none">04</span>
+                <div class="absolute bottom-0 left-0 right-0 z-20 px-8 lg:px-10 pb-8 lg:pb-9 pt-24">
+                    <div class="border-t border-[#111]/15 mb-4"></div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">React.js</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">FastAPI</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">MongoDB</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Gemini API</span>
+                    </div>
+                    <h3 class="font-['Noto_Serif'] text-2xl lg:text-3xl font-bold text-[#111] mb-3 group-hover:text-[#8B6A2E] transition-colors duration-300">ProfPickr</h3>
+                    <p class="font-['Manrope'] text-sm text-[#333] leading-relaxed max-w-lg mb-5">Pulls NJIT course schedules alongside RateMyProfessor ratings so students can pick the best combination in one place. Led the React.js frontend; cut professor selection time by ~15 min.</p>
+                    <span class="inline-flex items-center gap-2 font-['Manrope'] text-[#111]/30 text-[10px] uppercase tracking-[0.3em] cursor-default select-none">
+                        <i class="fas fa-lock text-[9px]"></i>Private Repository
+                    </span>
+                </div>
+            </article>
+
+            <!-- 05 RHEL — 7 cols -->
+            <article class="md:col-span-7 group relative rounded-sm overflow-hidden hover-lift border border-[#2A2A2A] hover:border-[#C5A059]/30 transition-colors duration-500 h-[420px] reveal-on-scroll">
+                <img src="assets/rhel.png" alt="RHEL Server" loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover object-left project-img scale-105 group-hover:scale-100 transition-transform duration-1000 bg-[#131313]" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/60 to-black/10 z-10 pointer-events-none"></div>
+                <span class="absolute top-5 right-6 z-20 font-['Manrope'] text-[9px] text-[#C5A059]/60 tracking-[0.4em] font-bold select-none">05</span>
+                <div class="absolute bottom-0 left-0 right-0 z-20 px-8 lg:px-10 pb-8 lg:pb-9 pt-24 backdrop-blur-[2px]">
+                    <div class="border-t border-[#C5A059]/15 mb-4"></div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Docker</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Wazuh</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">Splunk</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">WireGuard</span>
+                        <span class="px-2 py-0.5 bg-[#C5A059]/10 border border-[#C5A059]/20 text-[#C5A059] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">VMware</span>
+                    </div>
+                    <h3 class="font-['Noto_Serif'] text-2xl lg:text-3xl font-bold text-[#E5E4E2] mb-3 group-hover:text-[#C5A059] transition-colors duration-300">RHEL 9.5 Server &amp; SIEM</h3>
+                    <p class="font-['Manrope'] text-sm text-[#9A8F80] leading-relaxed max-w-lg mb-5">Home lab with RHEL, Fedora, and Windows VMs. Self-hosted Nextcloud on Docker, Wazuh + Splunk SIEM, and WireGuard VPN for secure remote access.</p>
+                    <a href="https://belal-ezat.gitbook.io/projects/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 font-['Manrope'] text-[#E5E4E2] text-[10px] uppercase tracking-[0.3em] group/cta w-fit">
+                        <span class="pb-0.5 border-b border-[#E5E4E2]/30 group-hover/cta:border-[#C5A059] group-hover/cta:text-[#C5A059] transition-colors">View Docs</span>
+                        <i class="fas fa-arrow-right text-[#C5A059] group-hover/cta:translate-x-1 transition-transform text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 06 Inventory — 5 cols -->
+            <article class="md:col-span-5 group relative rounded-sm overflow-hidden hover-lift border border-[#2A2A2A] hover:border-[#8B6A2E]/40 transition-colors duration-500 h-[420px] reveal-on-scroll">
+                <img src="assets/sportshop.png" alt="Inventory Management" loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover object-top project-img scale-105 group-hover:scale-100 blur-[2px] transition-transform duration-1000 bg-[#1a3a5c]" />
+                <span class="absolute top-5 right-6 z-20 font-['Manrope'] text-[9px] text-white/50 tracking-[0.4em] font-bold select-none">06</span>
+                <div class="absolute bottom-0 left-0 right-0 z-20 px-8 lg:px-10 pb-8 lg:pb-9 pt-24">
+                    <div class="border-t border-[#111]/15 mb-4"></div>
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">PHP</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">MySQL</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">JavaScript</span>
+                        <span class="px-2 py-0.5 bg-transparent border border-[#111]/20 text-[#111] font-['Manrope'] text-[9px] uppercase tracking-[0.2em] rounded-sm font-bold">HTML / CSS</span>
+                    </div>
+                    <h3 class="font-['Noto_Serif'] text-2xl lg:text-3xl font-bold text-[#111] mb-3 group-hover:text-[#8B6A2E] transition-colors duration-300">Full-Stack Inventory Management</h3>
+                    <p class="font-['Manrope'] text-sm text-[#333] leading-relaxed mb-5">Full CRUD inventory system with session-based PHP auth and parameterized queries. AJAX live updates and dual-layer input validation to block XSS and SQL injection.</p>
+                    <a href="https://github.com/belalezat1/bte5-IT202-Website" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 font-['Manrope'] text-[#111] text-[10px] uppercase tracking-[0.3em] group/cta w-fit">
+                        <span class="pb-0.5 border-b border-[#111]/30 group-hover/cta:border-[#8B6A2E] group-hover/cta:text-[#8B6A2E] transition-colors">View on GitHub</span>
+                        <i class="fas fa-arrow-right text-[#8B6A2E] group-hover/cta:translate-x-1 transition-transform text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
         </div>
-    </header>
+    </div>
+</section>
 
-    <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] min-h-screen flex items-center relative overflow-hidden scroll-animate animate-visible blueprint-grid" id="hero">
-        <canvas id="particle-canvas"></canvas>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-center lg:text-left">
-                    <div class="inline-flex items-center px-4 py-2 bg-[var(--secondary-button-bg-color)] border border-[var(--dark-border-color)] rounded-full text-[var(--dark-text-color)] text-sm font-medium mb-6">
-                        <i class="fas fa-terminal text-[var(--primary-color)] mr-2"></i>
-                        <span id="now-playing" class="transition-opacity duration-500">Building... </span>
-                    </div>
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-[var(--dark-text-color)] mb-2 leading-tight">Belal Ezat</h1>
-                    <p class="text-xl sm:text-3xl lg:text-4xl font-bold mb-6">
-                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Software & Systems Engineer</span>
-                    </p>
-                    <p class="text-lg sm:text-xl text-[var(--gray-text-color)] mb-8 leading-relaxed">CS student at NJIT. I like building things that work, from snake bots to cloud infrastructure.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#portfolio" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center">
-                            <i class="fas fa-folder-open mr-3"></i>
-                            View My Work
-                        </a>
-                        <a href="#about" class="bg-transparent border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--primary-button-text-color)] px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                            <i class="fas fa-user mr-3"></i>
-                            More About Me
-                        </a>
-                    </div>
-                </div>
-                <div class="relative lg:ml-64 mt-8 lg:mt-0">
-                    <div class="relative z-10">
-                        <img src="assets/belal.JPG" alt="Belal Ezat Personal Portfolio" class="block mx-auto lg:mx-0 w-40 h-40 sm:w-80 sm:h-80 rounded-full object-cover object-[50%_30%] scale-110 shadow-2xl transform hover:scale-[1.15] transition-transform duration-500" />
-                    </div>
-                </div>
-            </div>
+<!-- ===================== EXPERIENCE ===================== -->
+<section class="py-32 px-6 lg:px-16 bg-[#0E0E0E]" id="experience">
+    <div class="max-w-5xl mx-auto">
+        <div class="reveal-on-scroll mb-24 text-center">
+            <h2 class="font-['Noto_Serif'] text-5xl md:text-6xl font-bold tracking-tight mb-6">Professional<br/>Trajectory</h2>
+            <div class="w-16 h-0.5 gold-metallic mx-auto"></div>
         </div>
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#portfolio"><i class="fas fa-chevron-down text-[var(--gray-text-color)] text-xl"></i></a>
-        </div>
-    </section>
 
-    <section class="code-section bg-[var(--dark-background-color)] py-20 relative scroll-animate" id="portfolio">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 lg:mb-24">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6">
-                    Featured <span class="text-[var(--primary-color)]">Projects</span>
-                </h2>
-                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">A sequential journey through my most impactful work.</p>
-            </div>
+        <div class="relative space-y-24 reveal-on-scroll">
+            <!-- Vertical line -->
+            <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[0.5px] bg-[#C5A059]/20 md:-translate-x-px"></div>
 
-            <div class="relative w-full max-w-6xl mx-auto pb-24">
-
-                <div class="sticky z-10 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-90px)] lg:max-h-none top-[90px] lg:top-[100px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
-                        <img src="assets/battlesnake.png" alt="Battlesnake 2026 Project" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
-                    </div>
-                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">Battlesnake 2026 (NJIT Hackathon) | 2nd Place</h3>
-                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-6">
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">Python 3.12</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">Flask</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">Docker</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">BattleSnake API</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-purple-500/10 text-purple-400 rounded-full text-[10px] lg:text-xs font-semibold">MCTS & A* Pathfinding</span>
-                        </div>
-
-                        <div class="mb-6">
-                            <a href="https://github.com/belalezat1/battlesnake2026" target="_blank" class="inline-flex items-center px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[var(--dark-border-color)] rounded-lg text-[var(--gray-text-color)] hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                                <i class="fab fa-github mr-2"></i>
-                                View on GitHub
-                            </a>
-                        </div>
-
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Built an AI-powered snake bot with Team Packet Sniffers that placed 2nd. It hunts food early, grows fast, then uses its size to eliminate opponents.</li>
-                            <li>Decision-making runs on a hybrid pipeline: 60% heuristic scoring + 40% Monte Carlo Tree Search with opponent prediction to pick the best move each turn.</li>
-                            <li>The snake uses A* pathfinding, flood fill for space control, Voronoi territory mapping, and kill-square detection to corner opponents in late-game scenarios.</li>
-                            <li>Runs as a Dockerized Flask server that responds to the BattleSnake API under a strict 500ms timeout per turn.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sticky z-20 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-100px)] lg:max-h-none top-[100px] lg:top-[120px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-16 shrink-0">
-                        <img src="assets/logo.png" alt="Personal Portfolio Logo" class="w-full h-full object-contain drop-shadow-2xl" />
-                    </div>
-                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 status-dot-wrapper">
-                            <span>Dynamic Personal Portfolio</span>
-                            <div class="status-dot"></div>
-                        </h3>
-                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Tailwind CSS</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">JavaScript (ES6)</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Intersection Observer API</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(255,87,34,0.1)] text-[#ff5722] rounded-full text-[10px] lg:text-xs font-semibold">Mobile-First Design</span>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>The site you're looking at right now. A fully responsive single-page portfolio built from scratch with HTML, CSS, and JavaScript.</li>
-                            <li>Styled entirely with Tailwind CSS for fast, consistent theming across every section and breakpoint.</li>
-                            <li>Scroll-triggered animations and the equalizer visual are powered by the Intersection Observer API, no libraries needed.</li>
-                            <li>The "Listening..." ticker in the hero section cycles through skills using a custom JS interval loop, tying into the music-streaming aesthetic.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sticky z-30 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-110px)] lg:max-h-none top-[110px] lg:top-[140px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
-                        <img src="assets/clinicsense.jpeg" alt="ClinicSense Project Architecture" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
-                    </div>
-                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ClinicSense: AI-Powered Clinical Feedback | 3rd Place</h3>
-                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">React</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Flask</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Celery</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">Redis</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">AWS Bedrock (Claude 3.5)</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-[rgba(44,98,248,0.1)] text-[#2c62f8] rounded-full text-[10px] lg:text-xs font-semibold">AWS S3 & DynamoDB</span>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Medical students upload clinical presentations and get instant AI-generated feedback: rubric scores, actionable tips, and an exemplar version of their work.</li>
-                            <li>Backend runs on Flask + Celery + Redis, processing video, audio, and text asynchronously so nothing blocks the user.</li>
-                            <li>Uses AWS Bedrock (Claude 3.5) for evaluation, Transcribe for speech-to-text, and Comprehend for pulling out clinical entities automatically.</li>
-                            <li>React frontend handles uploads, displays results, and connects to S3 and DynamoDB on the backend. Won 3rd place at RU Health Hacks (AWS MedEd Track).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sticky z-40 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-120px)] lg:max-h-none top-[120px] lg:top-[160px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
-                        <img src="assets/profpickr.png" alt="ProfPickr Project" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
-                    </div>
-                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">ProfPickr</h3>
-                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">React.js</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">FastAPI</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">MongoDB</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-teal-500/10 text-teal-400 rounded-full text-[10px] lg:text-xs font-semibold">Gemini API</span>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Built with a 4-person team. ProfPickr pulls NJIT course schedules alongside RateMyProfessor ratings so students can pick classes and professors in one place.</li>
-                            <li>Set up the MongoDB layer end-to-end: schema design, connection handling, and integration with the FastAPI backend.</li>
-                            <li>Led the React.js frontend: search, filtering, and professor summary views that make the data actually usable.</li>
-                            <li>Cuts class selection time by ~15-20 minutes per student by combining multiple data sources into a single search.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sticky z-50 w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row mb-16 lg:mb-32 min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-130px)] lg:max-h-none top-[130px] lg:top-[180px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
-                        <img src="assets/rhel.png" alt="Server Infrastructure" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
-                    </div>
-                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">RHEL 9.5 Server Deployment & SIEM</h3>
-                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-6">
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">Docker & Nextcloud</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">Wazuh & Splunk</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">WireGuard VPN</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">VMWare</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-green-500/10 text-green-400 rounded-full text-[10px] lg:text-xs font-semibold">SNMP & Sysmon</span>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <a href="https://belal-ezat.gitbook.io/projects/" target="_blank" class="inline-flex items-center px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[var(--dark-border-color)] rounded-lg text-[var(--gray-text-color)] hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
-                                <i class="fas fa-book mr-2"></i>
-                                View Project Documentation
-                            </a>
-                        </div>
-
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Home lab running RHEL, Fedora, and Windows VMs. Used as a sandbox for testing security tooling, networking, and monitoring in a real multi-OS environment.</li>
-                            <li>Self-hosted Nextcloud via Docker on RHEL with persistent volumes, container networking, and LAN-wide secure access for private cloud storage.</li>
-                            <li>Wazuh + Splunk SIEM pipeline with syslog forwarding and custom alert rules that catch SSH anomalies and system events in real time.</li>
-                            <li>WireGuard VPN for remote access with port forwarding, plus SNMP monitoring across all hosts.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sticky z-[60] w-full rounded-3xl border border-[var(--dark-border-color)] bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] shadow-2xl overflow-y-auto overflow-x-hidden flex flex-col lg:flex-row min-h-[70vh] lg:min-h-[85vh] max-h-[calc(100vh-140px)] lg:max-h-none top-[140px] lg:top-[200px]">
-                    <div class="w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto relative border-b lg:border-b-0 lg:border-r border-[var(--dark-border-color)] bg-black/40 flex items-center justify-center p-6 lg:p-12 shrink-0">
-                        <img src="assets/sportshop.png" alt="Board Sports Apparel Shop Inventory" class="w-full h-full object-contain drop-shadow-2xl rounded-lg" />
-                    </div>
-                    <div class="w-full lg:w-1/2 p-6 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">Full-Stack Inventory Management</h3>
-                        <div class="flex flex-wrap gap-2 mb-4 lg:mb-8">
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">PHP</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">MySQL</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">JavaScript (AJAX)</span>
-                            <span class="px-2 py-1 lg:px-3 lg:py-1 bg-yellow-500/10 text-yellow-400 rounded-full text-[10px] lg:text-xs font-semibold">HTML/CSS</span>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 lg:space-y-4 text-sm sm:text-base lg:text-lg leading-relaxed">
-                            <li>Full CRUD inventory system with products, categories, search, and filtering backed by a normalized MySQL database.</li>
-                            <li>PHP handles auth (session-based login) and all form processing, with parameterized queries to prevent SQL injection.</li>
-                            <li>Frontend uses vanilla HTML/CSS/JS with AJAX calls so updates happen without full page reloads.</li>
-                            <li>Input validation and output sanitization on both client and server side to block XSS and injection attacks.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden scroll-animate" id="experience">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4">
-                    Work <span class="text-[var(--primary-color)]">Experience</span>
-                </h2>
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-white status-dot-wrapper">
-                        <span>Systems Engineer Intern</span>
-                        <div class="status-dot"></div>
+            <!-- Thorlabs — current, gold glow dot -->
+            <div class="relative flex flex-col md:flex-row gap-6 md:gap-0 group pl-12 md:pl-0">
+                <div class="md:w-1/2 md:pr-20 md:text-right">
+                    <span class="font-['Manrope'] text-[#C5A059] tracking-[0.3em] text-[10px] uppercase mb-3 block font-bold">May 2026 – Aug 2026</span>
+                    <h3 class="font-['Noto_Serif'] text-2xl font-bold mb-3 group-hover:text-[#C5A059] transition-colors flex md:justify-end items-center gap-3">
+                        Systems Engineer Intern
+                        <span class="status-dot shrink-0"></span>
                     </h3>
-                    <p class="text-lg text-[var(--primary-color)] font-semibold">Thorlabs</p>
-                    <p class="text-md text-gray-400 mb-4">May 2026 – Aug 2026</p>
-                    <p class="text-gray-300">
-                        Focused on migrating legacy infrastructure to modern platforms, creating automated deployment pipelines, updating system configurations for improved reliability, and upgrading hardware and software across enterprise environments.
-                    </p>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-base leading-relaxed">Migrating legacy infrastructure to modern platforms, building automated deployment pipelines, and upgrading hardware and software across enterprise environments.</p>
                 </div>
-                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)] mt-8">
-                    <h3 class="text-2xl font-bold text-white">Administrative Project Manager</h3>
-                    <p class="text-lg text-[var(--primary-color)] font-semibold">Rock Properties</p>
-                    <p class="text-md text-gray-400 mb-4">Nov 2025 – Feb 2026 | East Orange, NJ</p>
-                    <p class="text-gray-300">
-                        Managed regulatory compliance and digital recordkeeping for Section 8/HUD and LIHTC properties, generated monthly MUI reports and maintained tenant ledgers while collaborating with bookkeeping for financial accuracy, and oversaw capital projects and maintenance workflows including utility access and violation remediation.
-                    </p>
+                <div class="absolute left-[7px] md:left-1/2 md:-translate-x-[6px] top-1 w-3 h-3 rounded-full bg-[#C5A059] shadow-[0_0_16px_rgba(197,160,89,0.6)] ring-4 ring-[#0E0E0E]"></div>
+                <div class="md:w-1/2 md:pl-20 flex md:items-start md:pt-1">
+                    <span class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-[0.3em] font-light">Thorlabs</span>
                 </div>
-                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)] mt-8">
-                    <h3 class="text-2xl font-bold text-white">IT Specialist</h3>
-                    <p class="text-lg text-[var(--primary-color)] font-semibold">Best Bet Computer</p>
-                    <p class="text-md text-gray-400 mb-4">Sep 2025 - Dec 2025 | Union, NJ</p>
-                    <p class="text-gray-300">
-                        Provided comprehensive IT support by deploying and configuring hardware at client sites, managing multiple client websites to improve performance and uptime, and remotely resolving complex software issues to significantly reduce system downtime.
-                    </p>
+            </div>
+
+            <!-- Rock Properties — past, muted dot, reversed -->
+            <div class="relative flex flex-col md:flex-row-reverse gap-6 md:gap-0 group pl-12 md:pl-0">
+                <div class="md:w-1/2 md:pl-20">
+                    <span class="font-['Manrope'] text-[#C5A059] tracking-[0.3em] text-[10px] uppercase mb-3 block font-bold">Nov 2025 – Feb 2026</span>
+                    <h3 class="font-['Noto_Serif'] text-2xl font-bold mb-3 group-hover:text-[#C5A059] transition-colors">Administrative Project Manager</h3>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-base leading-relaxed">Managed regulatory compliance and digital recordkeeping for Section 8/HUD and LIHTC properties, generated monthly MUI reports, and oversaw capital projects and maintenance workflows.</p>
+                </div>
+                <div class="absolute left-[7px] md:left-1/2 md:-translate-x-[6px] top-1 w-3 h-3 rounded-full bg-[#4D4635] ring-4 ring-[#0E0E0E]"></div>
+                <div class="md:w-1/2 md:pr-20 md:text-right flex md:items-start md:justify-end md:pt-1">
+                    <span class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-[0.3em] font-light">Rock Properties · East Orange, NJ</span>
+                </div>
+            </div>
+
+            <!-- Best Bet — past, muted dot -->
+            <div class="relative flex flex-col md:flex-row gap-6 md:gap-0 group pl-12 md:pl-0">
+                <div class="md:w-1/2 md:pr-20 md:text-right">
+                    <span class="font-['Manrope'] text-[#C5A059] tracking-[0.3em] text-[10px] uppercase mb-3 block font-bold">Sep 2025 – Dec 2025</span>
+                    <h3 class="font-['Noto_Serif'] text-2xl font-bold mb-3 group-hover:text-[#C5A059] transition-colors">IT Specialist</h3>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-base leading-relaxed">Deployed and configured hardware at client sites, managed multiple client websites to improve performance and uptime, and remotely resolved software issues to reduce system downtime.</p>
+                </div>
+                <div class="absolute left-[7px] md:left-1/2 md:-translate-x-[6px] top-1 w-3 h-3 rounded-full bg-[#4D4635] ring-4 ring-[#0E0E0E]"></div>
+                <div class="md:w-1/2 md:pl-20 flex md:items-start md:pt-1">
+                    <span class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-[0.3em] font-light">Best Bet Computer · Union, NJ</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="code-section bg-[var(--dark-background-color)] py-20 scroll-animate slide-from-right" id="extracurriculars">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-                    Extracurriculars & <span class="text-[var(--primary-color)]">Awards</span>
-                </h2>
+<!-- ===================== EXTRACURRICULARS & AWARDS ===================== -->
+<section class="py-32 px-6 lg:px-16 bg-[#0A0A0A]" id="extracurriculars">
+    <div class="max-w-7xl mx-auto">
+        <div class="reveal-on-scroll flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
+            <h2 class="font-['Noto_Serif'] text-5xl md:text-6xl font-bold tracking-tight">Extracurriculars<br/>&amp; Awards</h2>
+            <div class="flex items-center gap-4">
+                <div class="h-px w-12 bg-[#C5A059]/30"></div>
+                <p class="font-['Manrope'] text-[#9A8F80] tracking-[0.3em] uppercase text-[10px]">NJIT · 2025–Present</p>
             </div>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 md:items-start">
-                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-white status-dot-wrapper">
-                        <span>Treasurer</span>
-                        <div class="status-dot"></div>
-                    </h3>
-                    <p class="text-lg text-[var(--primary-color)] font-semibold">United Mission Relief (UMR) at NJIT</p>
-                    <p class="text-md text-gray-400 mb-4">Sep 2025 - Present</p>
-                    <p class="text-gray-300">
-                        Managed the club’s finances by developing and overseeing budgets, coordinating cost-effective events, and maintaining accurate financial records for the executive board.
-                    </p>
-                    <hr class="border-[var(--dark-border-color)] my-6" />
-                    <h3 class="text-2xl font-bold text-white status-dot-wrapper mt-6">
-                        <span>Senior Hacker</span>
-                        <div class="status-dot"></div>
-                    </h3>
-                    <p class="text-lg text-[var(--primary-color)] font-semibold">NJIT Information & Cybersecurity Club (NICC)</p>
-                    <p class="text-md text-gray-400 mb-4">Sep 2025 – Present</p>
-                    <p class="text-gray-300">
-                        Developed and deployed CTF challenges for JerseyCTF centered on web application exploitation and open-source intelligence, leveraging tools such as Burp Suite, OWASP ZAP, Wireshark, and custom Python scripts.
-                    </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 reveal-on-scroll">
+            <!-- Left: Club Roles -->
+            <div class="space-y-6">
+                <h3 class="font-['Manrope'] text-[#9A8F80] uppercase tracking-[0.3em] text-[10px] mb-6 font-bold">Club Roles</h3>
+
+                <div class="p-8 bg-[#131313] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/30 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-3">
+                        <h4 class="font-['Noto_Serif'] text-xl font-bold text-[#E5E4E2]">Treasurer</h4>
+                        <span class="status-dot mt-1.5 shrink-0"></span>
+                    </div>
+                    <p class="font-['Manrope'] text-[#C5A059] text-[10px] uppercase tracking-[0.2em] mb-3 font-bold">United Mission Relief (UMR) at NJIT · Sep 2025 – Present</p>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-sm leading-relaxed">Managed the club's finances by developing and overseeing budgets, coordinating cost-effective events, and maintaining accurate financial records for the executive board.</p>
                 </div>
-                <div class="bg-[var(--secondary-button-bg-color)] p-8 rounded-2xl border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-white mb-6">Awards & Certifications</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Certifications</h4>
-                            <ul class="list-none text-gray-300 space-y-4">
-                                <li class="flex items-start"><i class="fas fa-certificate text-blue-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">CompTIA Network+</p><p class="text-sm text-gray-400">September 2025</p></div></li>
-                                <li class="flex items-start"><i class="fas fa-certificate text-blue-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">CompTIA Security+</p><p class="text-sm text-gray-400">In Progress - TBD</p></div></li>
-                            </ul>
+
+                <div class="p-8 bg-[#131313] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/30 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-3">
+                        <h4 class="font-['Noto_Serif'] text-xl font-bold text-[#E5E4E2]">Senior Hacker</h4>
+                        <span class="status-dot mt-1.5 shrink-0"></span>
+                    </div>
+                    <p class="font-['Manrope'] text-[#C5A059] text-[10px] uppercase tracking-[0.2em] mb-3 font-bold">NJIT Information &amp; Cybersecurity Club (NICC) · Sep 2025 – Present</p>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-sm leading-relaxed">Developed and deployed CTF challenges for JerseyCTF centered on web exploitation and OSINT, using Burp Suite, OWASP ZAP, Wireshark, and custom Python scripts.</p>
+                </div>
+            </div>
+
+            <!-- Right: Awards & Certs -->
+            <div class="space-y-6">
+                <h3 class="font-['Manrope'] text-[#9A8F80] uppercase tracking-[0.3em] text-[10px] mb-6 font-bold">Awards &amp; Certifications</h3>
+
+                <!-- Certs -->
+                <div class="p-8 bg-[#131313] rounded-sm border border-[#2A2A2A]">
+                    <p class="font-['Manrope'] text-[#C5A059] text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">Certifications</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-certificate text-[#C5A059] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#E5E4E2]">CompTIA Network+</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">September 2025</p>
+                            </div>
                         </div>
-                        <hr class="border-[var(--dark-border-color)]">
-                        <div>
-                            <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Hackathons</h4>
-                            <ul class="list-none text-gray-300 space-y-4">
-                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">RU Health Hacks</p><p class="text-sm text-gray-400">3rd Place (AWS MedEd Track)</p></div></li>
-                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">Battlesnake 2026 (NJIT)</p><p class="text-sm text-gray-400">2nd Place | Team Packet Sniffers</p></div></li>
-                            </ul>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-certificate text-[#9A8F80] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#9A8F80]">CompTIA Security+</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">In Progress</p>
+                            </div>
                         </div>
-                        <hr class="border-[var(--dark-border-color)]">
-                        <div>
-                            <h4 class="text-lg font-semibold text-[var(--primary-color)] mb-3">Capture The Flag (CTF)</h4>
-                            <ul class="list-none text-gray-300 space-y-4">
-                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">ISC2NJ Incident Response</p><p class="text-sm text-gray-400">1st Place</p></div></li>
-                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">Pros v Joes CTF</p><p class="text-sm text-gray-400">3rd Place</p></div></li>
-                                <li class="flex items-start"><i class="fas fa-trophy text-yellow-400 mt-1 mr-3"></i><div><p class="font-semibold text-white">ISC2NJ CTF</p><p class="text-sm text-gray-400">1st Place</p></div></li>
-                            </ul>
+                    </div>
+                </div>
+
+                <!-- Hackathons -->
+                <div class="p-8 bg-[#131313] rounded-sm border border-[#2A2A2A]">
+                    <p class="font-['Manrope'] text-[#C5A059] text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">Hackathons</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-trophy text-[#C5A059] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#E5E4E2]">Battlesnake 2026 (NJIT)</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">2nd Place · Team Packet Sniffers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-trophy text-[#C5A059] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#E5E4E2]">RU Health Hacks</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">3rd Place · AWS MedEd Track</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTF -->
+                <div class="p-8 bg-[#131313] rounded-sm border border-[#2A2A2A]">
+                    <p class="font-['Manrope'] text-[#C5A059] text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">Capture The Flag</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-trophy text-[#C5A059] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#E5E4E2]">ISC2NJ Incident Response CTF</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">1st Place</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-trophy text-[#C5A059] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#E5E4E2]">ISC2NJ CTF</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">1st Place</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-trophy text-[#9A8F80] w-4 text-sm shrink-0"></i>
+                            <div>
+                                <p class="font-['Manrope'] text-sm font-semibold text-[#E5E4E2]">Pros v Joes CTF</p>
+                                <p class="font-['Manrope'] text-[10px] text-[#9A8F80] uppercase tracking-wider">3rd Place</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="code-section bg-[var(--dark-background-color)] py-20 scroll-animate" id="about">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6">
-                    My Top <span class="text-[var(--primary-color)]">Skills</span>
-                </h2>
-                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
-                    A list of my technical skills and the technologies I work with.
+<!-- ===================== SKILLS ===================== -->
+<section class="py-32 px-6 lg:px-16 bg-[#0E0E0E]" id="about">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start reveal-on-scroll progress-section">
+            <!-- Left: headline + chips -->
+            <div>
+                <h2 class="font-['Noto_Serif'] text-5xl md:text-6xl font-bold tracking-tight mb-8">Technical<br/>Core Index</h2>
+                <p class="font-['Manrope'] text-[#9A8F80] text-lg leading-relaxed max-w-lg mb-12 font-light">
+                    A selection of languages, tools, and frameworks I've built things with.
                 </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Python</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Java</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">C / C++</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">TypeScript</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">SQL / Bash</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">React</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Flask / FastAPI</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Node.js</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Docker</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">AWS</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Linux</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Wazuh / Splunk</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">MongoDB</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Redis / Celery</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Git / GitHub</span>
+                    <span class="px-5 py-2 bg-[#252525] text-[#C5A059] font-['Manrope'] text-[10px] uppercase tracking-[0.2em] rounded-sm border border-[#2A2A2A] hover:border-[#C5A059]/50 transition-colors cursor-default">Tailwind CSS</span>
+                </div>
             </div>
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-8 border border-[var(--dark-border-color)]">
-                    <h3 class="text-2xl font-bold text-[var(--dark-text-color)] mb-8 flex items-center"><i class="fas fa-code text-[var(--primary-color)] mr-3"></i>Languages</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Python</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Java</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">C</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">C++</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">HTML/CSS</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">JavaScript</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">TypeScript</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">SQL</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Bash/Shell</span>
-                        <span class="px-3 py-1 bg-[var(--primary-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">PHP</span>
+
+            <!-- Right: progress bars -->
+            <div class="space-y-5">
+                <div class="p-8 bg-[#131313] rounded-sm border-l-2 border-[#C5A059]">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-['Noto_Serif'] font-bold text-xl">Backend Engineering</h4>
+                        <span class="font-['Manrope'] text-[#C5A059] text-[10px] tracking-widest font-bold">90%</span>
+                    </div>
+                    <div class="w-full h-[2px] bg-[#252525] overflow-hidden">
+                        <div class="h-full gold-metallic progress-fill w-0" data-width="90%" style="width:0%"></div>
                     </div>
                 </div>
-                <div class="space-y-8">
-                    <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)]">
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center"><i class="fas fa-tools text-[var(--primary-color)] mr-3"></i>Developer Tools</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">VS Code</span>
-                            <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Eclipse</span>
-                            <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">IntelliJ IDEA</span>
-                            <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">GitHub</span>
-                            <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Docker</span>
-                            <span class="px-3 py-1 bg-[var(--accent-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Splunk</span>
-                        </div>
+                <div class="p-8 bg-[#131313] rounded-sm border-l-2 border-[#4D4635] hover:border-[#C5A059]/60 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-['Noto_Serif'] font-bold text-xl">Cloud &amp; Security</h4>
+                        <span class="font-['Manrope'] text-[#9A8F80] text-[10px] tracking-widest font-bold">80%</span>
                     </div>
-                    <div class="bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)]">
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-6 flex items-center"><i class="fas fa-cogs text-[var(--primary-color)] mr-3"></i>Technologies/Frameworks</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">React</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Node.js</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Flask</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">FastAPI</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Celery</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Redis</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">MongoDB</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">AWS</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">AWS Bedrock</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Azure</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Linux</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Git</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Wazuh</span>
-                            <span class="px-3 py-1 bg-[var(--accent3-color)] bg-opacity-20 text-white rounded-full text-sm font-medium">Tailwind CSS</span>
-                        </div>
+                    <div class="w-full h-[2px] bg-[#252525] overflow-hidden">
+                        <div class="h-full bg-[#4D4635] progress-fill w-0" data-width="80%" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="p-8 bg-[#131313] rounded-sm border-l-2 border-[#4D4635] hover:border-[#C5A059]/60 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-['Noto_Serif'] font-bold text-xl">Frontend Development</h4>
+                        <span class="font-['Manrope'] text-[#9A8F80] text-[10px] tracking-widest font-bold">75%</span>
+                    </div>
+                    <div class="w-full h-[2px] bg-[#252525] overflow-hidden">
+                        <div class="h-full bg-[#4D4635] progress-fill w-0" data-width="75%" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="p-8 bg-[#131313] rounded-sm border-l-2 border-[#4D4635] hover:border-[#C5A059]/60 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-['Noto_Serif'] font-bold text-xl">Systems &amp; Infrastructure</h4>
+                        <span class="font-['Manrope'] text-[#9A8F80] text-[10px] tracking-widest font-bold">85%</span>
+                    </div>
+                    <div class="w-full h-[2px] bg-[#252525] overflow-hidden">
+                        <div class="h-full bg-[#4D4635] progress-fill w-0" data-width="85%" style="width:0%"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="code-section bg-gradient-to-br from-[var(--dark-background-color)] via-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] py-20 relative overflow-hidden scroll-animate slide-from-right" id="contact">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="mb-12">
-                    <div class="inline-flex items-center px-6 py-3 bg-[var(--primary-color)] bg-opacity-20 rounded-full text-[var(--dark-text-color)] font-semibold mb-6 backdrop-blur-sm">
-                        <i class="fas fa-tools mr-3"></i>
-                        Ready to Build?
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight">
-                        Let's Build Something
-                        <span class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent">Cool Together</span>
-                    </h2>
-                    <p class="text-lg sm:text-xl text-[var(--gray-text-color)] leading-relaxed">
-                        Got a project idea, a question, or just want to talk tech? I'm always down to chat.
-                    </p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-                    <a href="#contact-section-footer" class="bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group">
-                        <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        Start a Project
-                    </a>
-                    <a href="#portfolio" class="bg-transparent border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--primary-button-text-color)] px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
-                        <i class="fas fa-folder-open mr-3 group-hover:rotate-12 transition-transform duration-300"></i>
-                        View Portfolio
-                    </a>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <a href="mailto:belalezat05@gmail.com" class="block group bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--primary-color)] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_8px_25px_rgba(var(--primary-color-rgb),0.2)]">
-                        <div class="w-16 h-16 bg-[var(--primary-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--primary-color)] transition-colors duration-300">
-                            <i class="fas fa-envelope text-[var(--primary-color)] text-2xl group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2 group-hover:text-[var(--primary-color)] transition-colors duration-300">Email Me</h3>
-                        <p class="text-[var(--gray-text-color)] mb-4">Get in touch for project inquiries</p>
-                        <span class="text-[var(--primary-color)] font-semibold transition-colors duration-300">belalezat05@gmail.com</span>
-                    </a>
-                    <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="block group bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent-color)] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_8px_25px_rgba(var(--accent-color-rgb),0.2)]">
-                        <div class="w-16 h-16 bg-[var(--accent-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--accent-color)] transition-colors duration-300">
-                            <i class="fab fa-linkedin text-[var(--accent-color)] text-2xl group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2 group-hover:text-[var(--accent-color)] transition-colors duration-300">LinkedIn</h3>
-                        <p class="text-[var(--gray-text-color)] mb-4">Connect professionally</p>
-                        <span class="text-[var(--accent-color)] font-semibold transition-colors duration-300">/in/belal-ezat</span>
-                    </a>
-                    <a href="https://github.com/belalezat1" target="_blank" class="block group bg-gradient-to-br from-[var(--secondary-button-bg-color)] to-[var(--dark-background-color)] rounded-2xl p-6 border border-[var(--dark-border-color)] hover:border-[var(--accent3-color)] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_8px_25px_rgba(var(--accent3-color-rgb),0.2)]">
-                        <div class="w-16 h-16 bg-[var(--accent3-color)] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--accent3-color)] transition-colors duration-300">
-                            <i class="fab fa-github text-[var(--accent3-color)] text-2xl group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2 group-hover:text-[var(--accent3-color)] transition-colors duration-300">GitHub</h3>
-                        <p class="text-[var(--gray-text-color)] mb-4">Check out my repositories</p>
-                        <span class="text-[var(--accent3-color)] font-semibold transition-colors duration-300">/belalezat1</span>
-                    </a>
-                </div>
-                <div class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] rounded-2xl p-8 text-[var(--dark-text-color)]">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-quote-left text-3xl opacity-50"></i>
-                    </div>
-                    <blockquote class="text-xl sm:text-2xl font-semibold mb-4 leading-relaxed">
-                        "One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man."
-                    </blockquote>
-                    <div class="text-lg opacity-90">- Elbert Hubbard</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="code-section bg-[var(--dark-background-color)] border-t border-[var(--dark-border-color)] py-16 scroll-animate" id="contact-section-footer">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-4 gap-12 mb-12">
-                <div class="lg:col-span-2">
-                    <a href="/" class="inline-block mb-6">
-                        <img src="assets/logo.png" alt="Belal Ezat Personal Portfolio" style="height: 200px; width: auto" class="w-auto" />
-                    </a>
-                    <p class="text-[var(--gray-text-color)] text-lg leading-relaxed mb-6 max-w-lg">
-                        When I'm not writing code, you'll find me on the golf course, out kayaking, or up on the mountain snowboarding.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://linkedin.com/in/belal-ezat" target="_blank" class="w-12 h-12 bg-[var(--secondary-button-bg-color)] hover:bg-[var(--primary-color)] rounded-full flex items-center justify-center text-[var(--gray-text-color)] hover:text-[var(--primary-button-text-color)] transition-all duration-300 transform hover:scale-110">
-                            <i class="fab fa-linkedin"></i>
+<!-- ===================== CONTACT ===================== -->
+<section class="py-32 px-6 lg:px-16 bg-[#0A0A0A]" id="contact">
+    <div class="max-w-6xl mx-auto reveal-on-scroll">
+        <div class="bg-[#131313] rounded-sm overflow-hidden border border-[#2A2A2A] shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Left -->
+                <div class="p-12 lg:p-20 border-b md:border-b-0 md:border-r border-[#2A2A2A] flex flex-col justify-center">
+                    <h2 class="font-['Noto_Serif'] text-4xl lg:text-5xl font-bold mb-6 leading-tight">Let's build<br/>something <span class="text-[#C5A059] italic">together.</span></h2>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-lg mb-12 font-light leading-relaxed">Open to internships, collaborations, and good conversations about tech.</p>
+                    <div class="space-y-6">
+                        <a href="mailto:belalezat05@gmail.com" class="flex items-center gap-5 group w-fit">
+                            <div class="w-11 h-11 rounded-full bg-[#1C1C1C] flex items-center justify-center group-hover:bg-[#C5A059] transition-all duration-300 shrink-0">
+                                <i class="fas fa-envelope text-[#C5A059] group-hover:text-black transition-colors text-sm"></i>
+                            </div>
+                            <span class="font-['Manrope'] font-semibold text-[#E5E4E2] border-b border-transparent group-hover:border-[#C5A059] group-hover:text-[#C5A059] transition-all py-0.5 text-sm">belalezat05@gmail.com</span>
                         </a>
-                        <a href="https://github.com/belalezat1" target="_blank" class="w-12 h-12 bg-[var(--secondary-button-bg-color)] hover:bg-[var(--accent4-color)] rounded-full flex items-center justify-center text-[var(--gray-text-color)] hover:text-[var(--primary-button-text-color)] transition-all duration-300 transform hover:scale-110">
-                            <i class="fab fa-github"></i>
+                        <a href="https://linkedin.com/in/belal-ezat" target="_blank" rel="noopener noreferrer" class="flex items-center gap-5 group w-fit">
+                            <div class="w-11 h-11 rounded-full bg-[#1C1C1C] flex items-center justify-center group-hover:bg-[#C5A059] transition-all duration-300 shrink-0">
+                                <i class="fab fa-linkedin text-[#C5A059] group-hover:text-black transition-colors text-sm"></i>
+                            </div>
+                            <span class="font-['Manrope'] font-semibold text-[#E5E4E2] border-b border-transparent group-hover:border-[#C5A059] group-hover:text-[#C5A059] transition-all py-0.5 text-sm">/in/belal-ezat</span>
+                        </a>
+                        <a href="https://github.com/belalezat1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-5 group w-fit">
+                            <div class="w-11 h-11 rounded-full bg-[#1C1C1C] flex items-center justify-center group-hover:bg-[#C5A059] transition-all duration-300 shrink-0">
+                                <i class="fab fa-github text-[#C5A059] group-hover:text-black transition-colors text-sm"></i>
+                            </div>
+                            <span class="font-['Manrope'] font-semibold text-[#E5E4E2] border-b border-transparent group-hover:border-[#C5A059] group-hover:text-[#C5A059] transition-all py-0.5 text-sm">/belalezat1</span>
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">Navigation</h3>
-                    <ul class="space-y-4">
-                        <li><a href="#hero" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-home mr-3 w-4"></i>Home</a></li>
-                        <li><a href="#portfolio" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-folder mr-3 w-4"></i>Projects</a></li>
-                        <li><a href="#experience" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-briefcase mr-3 w-4"></i>Experience</a></li>
-                        <li><a href="#extracurriculars" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-award mr-3 w-4"></i>Extracurriculars</a></li>
-                        <li><a href="#about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-user mr-3 w-4"></i>Skills</a></li>
-                        <li><a href="#contact" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center"><i class="fas fa-envelope mr-3 w-4"></i>Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-[var(--dark-text-color)] font-bold text-lg mb-6">Get in Touch</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-envelope text-[var(--primary-color)] mr-3 w-4"></i><a href="mailto:belalezat05@gmail.com" class="hover:text-[var(--primary-color)] transition-colors duration-300">belalezat05@gmail.com</a></div>
-                        <div class="flex items-center text-[var(--gray-text-color)]"><i class="fas fa-map-marker-alt text-[var(--primary-color)] mr-3 w-4"></i><span>New York Metropolitan Area</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-[var(--dark-border-color)] pt-8">
-                <div class="flex justify-center items-center">
-                    <div class="text-[var(--gray-text-color)] text-center">
-                        <p>&copy; 2026 Belal Ezat. All rights reserved.</p>
+                <!-- Right -->
+                <div class="p-12 lg:p-20 flex flex-col justify-center bg-[#0E0E0E]">
+                    <p class="font-['Manrope'] text-[#9A8F80] text-[10px] uppercase tracking-[0.3em] mb-6 font-bold">Location</p>
+                    <p class="font-['Noto_Serif'] text-2xl font-bold text-[#E5E4E2] mb-10">New York Metropolitan Area</p>
+                    <p class="font-['Manrope'] text-[#9A8F80] text-sm leading-relaxed mb-10">CS student at NJIT. When I'm not writing code, you'll find me on the golf course, out kayaking, or up on the mountain snowboarding.</p>
+                    <div class="border-t border-[#2A2A2A] pt-8">
+                        <p class="font-['Manrope'] text-[#9A8F80] text-xs leading-relaxed italic">"One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man."</p>
+                        <p class="font-['Manrope'] text-[#C5A059] text-[10px] uppercase tracking-[0.2em] mt-3">— Elbert Hubbard</p>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="scripts.js"></script>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-[#0E0E0E] border-t border-[#2A2A2A] py-14 px-6 lg:px-16" id="contact-section-footer">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex flex-col items-center md:items-start gap-3">
+            <img src="assets/logo.png" alt="Belal Ezat" class="h-8 w-auto opacity-70" />
+            <p class="font-['Manrope'] text-xs text-[#9A8F80] uppercase tracking-widest">© 2026 Belal Ezat. All rights reserved.</p>
+        </div>
+        <div class="flex gap-10">
+            <a href="#portfolio" class="font-['Manrope'] text-xs uppercase tracking-widest text-[#9A8F80] hover:text-[#C5A059] transition-colors duration-300">Portfolio</a>
+            <a href="#experience" class="font-['Manrope'] text-xs uppercase tracking-widest text-[#9A8F80] hover:text-[#C5A059] transition-colors duration-300">Experience</a>
+            <a href="https://github.com/belalezat1" target="_blank" rel="noopener noreferrer" class="font-['Manrope'] text-xs uppercase tracking-widest text-[#9A8F80] hover:text-[#C5A059] transition-colors duration-300">GitHub</a>
+            <a href="https://linkedin.com/in/belal-ezat" target="_blank" rel="noopener noreferrer" class="font-['Manrope'] text-xs uppercase tracking-widest text-[#9A8F80] hover:text-[#C5A059] transition-colors duration-300">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
