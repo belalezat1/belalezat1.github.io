@@ -4,20 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#C5A059",
-        "primary-light": "#E9C176",
-        "surface-low":      "#0E0E0E",
-        "surface-container": "#131313",
-        "surface-high":     "#1C1C1C",
-        "surface-highest":  "#252525",
-        "on-surface":         "#E5E4E2",
-        "on-surface-variant": "#9A8F80",
-        outline:    "#4D4635",
-        "outline-variant": "#2A2A2A",
+        background: "#0B0C0E",
+        surface: "#111316",
+        raised: "#17191D",
+        text: "#F1F1EE",
+        muted: "#A1A19B",
+        border: "#292B30",
+        accent: "#B49A68",
       },
       fontFamily: {
-        serif:  ['"Noto Serif"', 'serif'],
-        sans:   ['Manrope', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
       },
     },
   },
